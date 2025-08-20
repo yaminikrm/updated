@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <style>
+  /*///////////////////////////////////
+  BUZZ MITRA READ MORE 1 INNER SECTION
+  ///////////////////////////////////*/
+
+  .buzz-mitra-opportunity-background-img {
+    background-image: url("https://res.cloudinary.com/dlcuxbo8m/image/upload/v1755069160/Top_30_Companies_Hiring_for_Remote_Freelance_Jobs___FlexJobs-Picsart-AiImageEnhancer_ah6gdt.jpg");
+    background-size: cover;
+    height:40vh;
+    
+}
+
+@media(min-width:768px) {
+    .buzz-mitra-opportunity-background-img {
+        background-image: url("https://res.cloudinary.com/dlcuxbo8m/image/upload/v1755069160/Top_30_Companies_Hiring_for_Remote_Freelance_Jobs___FlexJobs-Picsart-AiImageEnhancer_ah6gdt.jpg");
+        background-size: cover;
+        height: 115vh;
+    }
+
+}
+
+.opp-img-icon {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .opp-img-icon {
+        width: 1600px;
+        height: 300px;
+    }
+}
+
+.opportunity-background-image {
+    /* background-image: url("https://res.cloudinary.com/dlcuxbo8m/image/upload/v1751869040/Abstract_Vector_Background_Squares_Going_In_Perspective_On_Gray_Background_Wallpaper_Background_Abstract_Background_Image_And_Wallpaper_for_Free_Download_hryvqt.jpg"); */
+    background-size: cover;
+    padding: 10px;
+}
+
+.opportunity-heading {
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 16px;
+
+}
+
+.buzz-opportunity-paragraph {
+    font-family: Roboto;
+    font-size: 10px;
+}
+
+.buzz-opportunity-small-container {
+    background-color: white;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+.opportunity-img-icon {
+    height: 140px;
+}
+
+@media (min-width:768px) {
+    .opportunity-heading {
+        font-family: Roboto;
+        font-weight: bold;
+        font-size: 20px;
+        padding-bottom: 20px;
+        padding-top: 10px;
+        
+    }
+
+    .buzz-opportunity-paragraph {
+        font-family: Roboto;
+        font-size: 12px;
+
+    }
+
+    .opportunity-img-icon {
+        height: 160px;
+    }
+
+
+}
+
+
+
+
+
+
+.partner-program-requirement-container {
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+    
+}
+
+.Partner-Program-Requirements-heading {
+    font-family: Roboto;
+    font-size: 18px;
+    text-align: center;
+  
+}
+
+.partner-program-requirement-cards {
+    margin: 10px;
+    padding: 12px;
+    /* box-shadow: 3px 3px 5px; */
+    text-align: center;
+
+}
+
+.payment-heading {
+    font-family: Roboto;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    text-decoration: underline;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.payment-paragraph {
+    font-family: Roboto;
+    font-size: 12px;
+}
+
+@media (min-width:768px) {
+    .partner-program-requirement-container {
+    background-color: white;
+    padding: 30px;
+    margin: 10px;
+    margin-top:100px;
+   }
+
+    .Partner-Program-Requirements-heading {
+        font-family: Roboto;
+        /* background: radial-gradient(circle at bottom left, #f7c35f, #a66f1d);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; */
+        font-size: 23px;
+        text-align: center;
+        font-weight: bold;
+        padding-bottom: 20px;
+        
+    }
+}
+
+.eligibility-paragraph {
+    font-family: Roboto;
+    text-align: center;
+    padding-top:50px;
+}
+
+.eligibility-icon {
+    height: 40px;
+}
+
+.investment-small-paragraph {
+    font-family: Roboto;
+}
+
+
+
+.eligibilty-container {
+    background: radial-gradient(circle at bottom left, #f7c35f, #a66f1d);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding-bottom: 30px;
+  padding-left: 5px;
+  padding-right: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+.eligibility-icon {
+    width: 24px;
+    height: 24px;
+    
+}
+.investment-small-paragraph {
+    font-size: 14px;
+
+}
+
+
+
+.custom-gap-md {
+        gap: 200px; /* 200px gap only for medium+ screens */
+    }
+
+    @media (max-width: 767px) {
+        .custom-gap-md {
+            gap: 20px; /* small screens lo normal gap */
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* FOOTER-------r */
+.footer {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 50px 20px 20px;
+  position: relative;
+}
+
+.footer .container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 60px;
+  align-items: start;
+}
+
+.footer-col h4 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #f7c948;
+  margin-bottom: 15px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  color: #000000;
+  transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #f7c948;
+}
+
+.footer .logo {
+  height: 90px;
+  margin-top: 40px;
+}
+
+.details p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #000000;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin-inline: auto;
+  margin-right: 60px;
+}
+
+.footer-bottom .company-name {
+  margin-right: 0;
+  font-size: 14px;
+  color: #000000;
+}
+
+.company-name {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.forex-cards-container-big {
+  margin-bottom: 50px;
+}
+
+#info-container h3 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* ====================== SOCIAL BAR ====================== */
+.social-bar {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  z-index: 9999;
+}
+
+.social-bar a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 25px 0 0 25px;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+  width: 45px;
+  overflow: hidden;
+}
+
+.social-bar a:hover {
+  width: 150px;
+}
+
+.social-bar a i {
+  min-width: 25px;
+  text-align: center;
+}
+
+.social-bar a span {
+  margin-left: 8px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.social-bar a:hover span {
+  opacity: 1;
+}
+
+/* Social brand colors */
+.facebook:hover { background-color: #3b5998; }
+.twitter:hover { background-color: #1da1f2; }
+.instagram:hover { background-color: #e1306c; }
+.linkedin:hover { background-color: #0077b5; }
+.youtube:hover { background-color: #ff0000; }
+
+
+
+/* ====================== RESPONSIVE ====================== */
+@media (max-width: 992px) {
+  .footer .container {
+    gap: 40px;
+  }
+  .footer-bottom {
+    justify-content: center;
+    text-align: center;
+    margin-right: 0;
+  }
+  .footer .logo {
+    height: 75px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    text-align: center;
+    padding: 20px 10px; /* reduce padding */
+  }
+
+  .footer .container {
+    grid-template-columns: 1fr;
+    gap: 20px; /* reduce vertical spacing between sections */
+  }
+
+  .footer-col {
+    margin-bottom: 15px; /* less gap between sections */
+  }
+
+  .footer .logo {
+    height: 60px;
+    margin-top: 15px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 8px; /* less spacing */
+    margin-top: 15px;
+  }
+
+  /* ---- REMOVE bottom bar conversion ---- */
+  .social-bar {
+    position: absolute;  /* same as desktop */
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    flex-direction: column;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .social-bar a {
+    width: 45px;
+    border-radius: 25px 0 0 25px;
+    margin: 5px 0;
+    padding: 12px;
+    justify-content: flex-start;
+  }
+
+  .social-bar a span {
+    display: inline-block;
+    opacity: 0;
+  }
+
+  .social-bar a:hover span {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    
+<div class="buzz-mitra-opportunity-background-img"></div>
+
+
+
+    <div class="opportunity-background-image">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <div class="buzz-opportunity-small-container">
+                        <h1 class="opportunity-heading">Earn with Buzz Holidays</h1>
+                        <p class="buzz-opportunity-paragraph">Partner with Buzz Holidays & Grow Your Travel Business! Join the Buzz Holidays Partner Program a great opportunity to start your own travel business with the support of a trusted brand. If you're passionate about travel, this is your chance to earn big and be part of India’s top travel planner. Enjoy full training, and ready-to-sell holiday packages.</p>
+                        <div>
+                            <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1751874748/069947aa717c2dd290b8d342dbd38cde---1_pc5h2f.png" class="opportunity-img-icon" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="buzz-opportunity-small-container">
+                        <h1 class="opportunity-heading">Partner Support</h1>
+                        <p class="buzz-opportunity-paragraph">Buzz Holidays Supports Your Travel Business Growth!
+                            Join the Buzz Holidays Partner Program — a rewarding franchise opportunity for passionate travel enthusiasts. Partner with a leading travel brand, build your business, and unlock unlimited earning potential as we work together to create happy travelers across India.
+                            Get end-to-end support, to ensure your success.</p>
+                        <div>
+                            <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1751874747/6bcce46be26688171c56a35c533f22a8_-------2_fyhjea.png" class="opportunity-img-icon" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="buzz-opportunity-small-container">
+                        <h1 class="opportunity-heading">Customer Benefits</h1>
+                        <p class="buzz-opportunity-paragraph">Customers Benefit at Every Buzz Holidays Partner Office!
+                            With our trusted franchise model, customers enjoy professional travel planning, and personalized service all from their local Buzz Holidays partner. We aim to create happy travelers while helping passionate individuals grow their own travel business.
+                            Every partner office delivers the same trusted.</p>
+                        <div>
+                            <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1751874747/3f3a10ced260a7be43f91b9eda4fc910_------3_ddcrbl.png" class="opportunity-img-icon" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="partner-program-requirement-container shadow">
+            <h1 class="Partner-Program-Requirements-heading">Partner Program Requirements</h1>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <div class="partner-program-requirement-cards">
+                            <h1 class="payment-heading">Payments</h1>
+                            <p class="payment-paragraph">Ideal for businesses that are seasonal or operate between fixed hours.</p>
+                            <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1751890082/ppr-1_xjgr4r.png" class="payment-icon" />
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="partner-program-requirement-cards">
+                            <h1 class="payment-heading">Point of Contact</h1>
+                            <p class="payment-paragraph">Set up irresistible deals and offers with flexible discount promo codes.</p>
+                            <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1751890083/ppr-2_uhdqvj.png" class="payment-icon" />
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="partner-program-requirement-cards">
+                            <h1 class="payment-heading">Recommendations</h1>
+                            <p class="payment-paragraph">Import products from and export products to CSV from vendor dashboard.</p>
+                            <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1751890084/ppr-3_beqxsf.png" class="payment-icon" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        <div>
+            <div class="eligibilty-container">     
+                <p class="eligibility-paragraph">
+                    To become a Buzz Holidays franchise partner, an investment ranging from ₹200,000 to ₹500,000 is required, depending on the city and store size. Partners should have access to a store or office space of approximately 300 to 500 sq ft, ideally located in a prominent area with high visibility for brand signage. We seek individuals who are not only passionate about travel but also possess strong business acumen to drive success in their local markets.
+                </p>
+<div class="d-flex flex-column flex-md-row align-items-center justify-content-center text-center custom-gap-md">
+    <!-- Investment -->
+    <div class="d-flex align-items-center gap-2">
+        <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1751970870/profit---investment_lf8dwj.png" class="eligibility-icon" alt="Investment Icon" />
+        <p class="mb-0 investment-small-paragraph">Investment: 0</p>
+    </div>
+
+    <!-- Earnings -->
+    <div class="d-flex align-items-center gap-2">
+        <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1751970870/income---income_lkbunq.png" class="eligibility-icon" alt="Income Icon" />
+        <p class="mb-0 investment-small-paragraph">Earn up to ₹1 Lakh per month</p>
+    </div>
+
+    <!-- Apply Button -->
+    <a href="bmread1.html">
+        <button class="btn btn-primary">Apply Now</button>
+    </a>
+</div>
+
+            </div>    
+
+            
+           
+
+            
+        </div>
+
+    </div>
+   
+
+
+
+
+
+
+<!-- footer -->
+<div>
+   
+    <div class="footer shadow">
+        <div class="container">
+          <!-- Logo Column -->
+          <div class="footer-col logo-col">
+            <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1752835706/0654a2c4ddb72401ea6f457be00c5c6c_wz3rhc.png" alt="Buzz Groups Logo" class="logo">
+          </div>
+
+          <!-- Contact Details -->
+          <div class="footer-col">
+            <h4>Address</h4>
+            <div class="details">
+              <p>#6-3-1111/B</p>
+              <p>Shop No 5 & 6, Babukhan Mall,<br>Greenlands Road, Somajiguda, Hyderabad</p>
+              <p>Telangana - 500082</p>
+              <p>info@buzzgroups.in</p>
+              <p>(+91) 888 600 8060</p>
+            </div>
+          </div>
+
+          <!-- Services -->
+          <div class="footer-col">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="#">Buzz Holidayz</a></li>
+              <li><a href="#">Buzz Forex</a></li>
+              <li><a href="#">Buzz Finserve</a></li>
+              <li><a href="#">Streets Corner</a></li>
+              <li><a href="#">Buzz Digital</a></li>
+            </ul>
+          </div>
+
+          <!-- Information -->
+          <div class="footer-col">
+            <h4>Information</h4>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Our Team</a></li>
+              <li><a href="#">Franchise Enquiry</a></li>
+            </ul>
+          </div>
+        </div>
+
+    
+        <!-- Social Media Bar -->
+            <div class="social-bar">
+                <a href="https://www.facebook.com/reel/630032483128401/?app=fbl" class="facebook"><i class="fab fa-facebook-f"></i><span>Facebook</span></a>
+                <!-- <a href="#" class="twitter"><i class="fab fa-twitter"></i><span>Twitter</span></a> -->
+                <a href="https://www.instagram.com/reel/DEXRCApPjXC/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA==" class="instagram"><i class="fab fa-instagram"></i><span>Instagram</span></a>
+                <a href="https://www.linkedin.com/in/leads-buzz-8aab81309" class="linkedin"><i class="fab fa-linkedin-in"></i><span>LinkedIn</span></a>
+                <a href="https://www.youtube.com/@BuzzGroups-STK" class="youtube"><i class="fab fa-youtube"></i><span>YouTube</span></a>
+            </div>
+
+          <div>       
+          <p class="company-name">STK UNITY UMBRELLA LTD. All Rights Reserved</p>
+          </div>
+    </div>
+
+</div>
+
+
+</body>
+</html>

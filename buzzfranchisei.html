@@ -1,0 +1,481 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 4.6.2 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+  <!-- Your Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- jQuery (required for Bootstrap 4) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+  <!-- Bootstrap 4.6.2 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+ 
+
+
+
+
+
+
+  <style>
+     /*////////////////////////////////////////////
+BUZZ MITRA FRANCHISE READ MORE 2 INNER SECTION 
+////////////////////////////////////////////*/
+
+.buzz-mitra-franchise-background-img {
+    background-image: url("https://res.cloudinary.com/dlcuxbo8m/image/upload/v1755070722/image-Picsart-AiImageEnhancer_pnqr6e.png");
+    background-size: cover;
+    height: 40vh;
+}
+
+@media(min-width:768px) {
+    .buzz-mitra-franchise-background-img {
+        background-image: url("https://res.cloudinary.com/dlcuxbo8m/image/upload/v1755070722/image-Picsart-AiImageEnhancer_pnqr6e.png");
+        background-size: cover;
+        height: 110vh;
+    }
+}
+
+.franchise-opportunity-background-image {
+    /* background-image: url("https://res.cloudinary.com/dlcuxbo8m/image/upload/v1751869040/Abstract_Vector_Background_Squares_Going_In_Perspective_On_Gray_Background_Wallpaper_Background_Abstract_Background_Image_And_Wallpaper_for_Free_Download_hryvqt.jpg"); */
+    background-size: cover;
+    padding: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.franchise-partner-program-requirement-container {
+    background-color: white;
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+.franchise-Partner-Program-Requirements-heading {
+    font-family: Roboto;
+    background: radial-gradient(circle at bottom left, #f7c35f, #a66f1d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 17px;
+    text-align: center;
+}
+
+@media (min-width:768px) {
+    .franchise-Partner-Program-Requirements-heading {
+        font-family: Roboto;
+        background: radial-gradient(circle at bottom left, #f7c35f, #a66f1d);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 20px;
+        text-align: center;
+        font-weight: bold;
+    }
+}
+
+.franchise-eligibility-paragraph {
+    font-family: Roboto;
+    text-align: center;
+}
+
+.franchise-eligibility-icon {
+    height: 40px;
+}
+
+.franchise-investment-small-paragraph {
+    font-family: Roboto;
+}
+
+
+
+/* Default style (for medium & large screens) */
+.custom-gap {
+  gap: 140px; /* only desktops & tablets */
+}
+
+/* Small devices */
+@media (max-width: 767px) {
+  .custom-gap {
+    gap: 15px; /* thakkuva spacing mobile lo */
+    flex-direction: column; /* okadani kinda okati */
+  }
+
+  .custom-gap > div,
+  .custom-gap a {
+    padding-top: 5px !important; /* ekkuva padding remove */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* FOOTER-------r */
+.footer {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 50px 20px 20px;
+  position: relative;
+}
+
+.footer .container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 60px;
+  align-items: start;
+}
+
+.footer-col h4 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #f7c948;
+  margin-bottom: 15px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  color: #000000;
+  transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #f7c948;
+}
+
+.footer .logo {
+  height: 90px;
+  margin-top: 40px;
+}
+
+.details p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #000000;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin-inline: auto;
+  margin-right: 60px;
+}
+
+.footer-bottom .company-name {
+  margin-right: 0;
+  font-size: 14px;
+  color: #000000;
+}
+
+.company-name {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.forex-cards-container-big {
+  margin-bottom: 50px;
+}
+
+#info-container h3 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* ====================== SOCIAL BAR ====================== */
+.social-bar {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  z-index: 9999;
+}
+
+.social-bar a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 25px 0 0 25px;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+  width: 45px;
+  overflow: hidden;
+}
+
+.social-bar a:hover {
+  width: 150px;
+}
+
+.social-bar a i {
+  min-width: 25px;
+  text-align: center;
+}
+
+.social-bar a span {
+  margin-left: 8px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.social-bar a:hover span {
+  opacity: 1;
+}
+
+/* Social brand colors */
+.facebook:hover { background-color: #3b5998; }
+.twitter:hover { background-color: #1da1f2; }
+.instagram:hover { background-color: #e1306c; }
+.linkedin:hover { background-color: #0077b5; }
+.youtube:hover { background-color: #ff0000; }
+
+
+
+/* ====================== RESPONSIVE ====================== */
+@media (max-width: 992px) {
+  .footer .container {
+    gap: 40px;
+  }
+  .footer-bottom {
+    justify-content: center;
+    text-align: center;
+    margin-right: 0;
+  }
+  .footer .logo {
+    height: 75px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    text-align: center;
+    padding: 20px 10px; /* reduce padding */
+  }
+
+  .footer .container {
+    grid-template-columns: 1fr;
+    gap: 20px; /* reduce vertical spacing between sections */
+  }
+
+  .footer-col {
+    margin-bottom: 15px; /* less gap between sections */
+  }
+
+  .footer .logo {
+    height: 60px;
+    margin-top: 15px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 8px; /* less spacing */
+    margin-top: 15px;
+  }
+
+  /* ---- REMOVE bottom bar conversion ---- */
+  .social-bar {
+    position: absolute;  /* same as desktop */
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    flex-direction: column;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .social-bar a {
+    width: 45px;
+    border-radius: 25px 0 0 25px;
+    margin: 5px 0;
+    padding: 12px;
+    justify-content: flex-start;
+  }
+
+  .social-bar a span {
+    display: inline-block;
+    opacity: 0;
+  }
+
+  .social-bar a:hover span {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </style>
+
+</head>
+<body>
+    
+<div class="buzz-mitra-franchise-background-img"></div>
+<div class="franchise-opportunity-background-image">
+        <div class="franchise-partner-program-requirement-container">
+            <h1 class="franchise-Partner-Program-Requirements-heading mb-3">Partner Program Requirements</h1>
+
+            <div>
+              <p class="franchise-eligibility-paragraph">
+                    To become a Buzz Holidays franchise partner, an investment ranging from ₹200,000 to ₹500,000 is required, depending on the city and the size of the store. Prospective partners should have access to a store or office space measuring approximately 300 to 500 square feet, located in a prominent area that offers good visibility for brand signage. We are looking for individuals who not only have a passion for travel but also possess strong business acumen to drive success in the travel industry.
+              </p>
+
+<div class="d-flex flex-column flex-md-row align-items-center justify-content-center text-center custom-gap">
+    <!-- Investment -->
+    <div class="d-flex align-items-center gap-2 pt-5">
+        <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1751970870/profit---investment_lf8dwj.png" class="franchise-eligibility-icon" alt="Investment Icon" />
+        <p class="mb-0 franchise-investment-small-paragraph">Investment: Up to 25 Lakhs</p>
+    </div>
+
+    <!-- Income -->
+    <div class="d-flex align-items-center gap-2 pt-5">
+        <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1751970870/income---income_lkbunq.png" class="franchise-eligibility-icon" alt="Income Icon" />
+        <p class="mb-0 franchise-investment-small-paragraph">3-5 Lakh per Month</p>
+    </div>
+
+    <!-- Apply Button -->
+    <a href="bmread2.html">
+        <button class="btn btn-primary mt-5">Apply Now</button>
+    </a>
+</div>
+
+            </div>
+
+        </div>
+</div>
+
+
+
+<!-- footer -->
+<div>
+   
+    <div class="footer shadow">
+        <div class="container">
+          <!-- Logo Column -->
+          <div class="footer-col logo-col">
+            <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1752835706/0654a2c4ddb72401ea6f457be00c5c6c_wz3rhc.png" alt="Buzz Groups Logo" class="logo">
+          </div>
+
+          <!-- Contact Details -->
+          <div class="footer-col">
+            <h4>Address</h4>
+            <div class="details">
+              <p>#6-3-1111/B</p>
+              <p>Shop No 5 & 6, Babukhan Mall,<br>Greenlands Road, Somajiguda, Hyderabad</p>
+              <p>Telangana - 500082</p>
+              <p>info@buzzgroups.in</p>
+              <p>(+91) 888 600 8060</p>
+            </div>
+          </div>
+
+          <!-- Services -->
+          <div class="footer-col">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="#">Buzz Holidayz</a></li>
+              <li><a href="#">Buzz Forex</a></li>
+              <li><a href="#">Buzz Finserve</a></li>
+              <li><a href="#">Streets Corner</a></li>
+              <li><a href="#">Buzz Digital</a></li>
+            </ul>
+          </div>
+
+          <!-- Information -->
+          <div class="footer-col">
+            <h4>Information</h4>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Our Team</a></li>
+              <li><a href="#">Franchise Enquiry</a></li>
+            </ul>
+          </div>
+        </div>
+
+    
+        <!-- Social Media Bar -->
+            <div class="social-bar">
+                <a href="https://www.facebook.com/reel/630032483128401/?app=fbl" class="facebook"><i class="fab fa-facebook-f"></i><span>Facebook</span></a>
+                <!-- <a href="#" class="twitter"><i class="fab fa-twitter"></i><span>Twitter</span></a> -->
+                <a href="https://www.instagram.com/reel/DEXRCApPjXC/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA==" class="instagram"><i class="fab fa-instagram"></i><span>Instagram</span></a>
+                <a href="https://www.linkedin.com/in/leads-buzz-8aab81309" class="linkedin"><i class="fab fa-linkedin-in"></i><span>LinkedIn</span></a>
+                <a href="https://www.youtube.com/@BuzzGroups-STK" class="youtube"><i class="fab fa-youtube"></i><span>YouTube</span></a>
+            </div>
+
+          <div>       
+          <p class="company-name">STK UNITY UMBRELLA LTD. All Rights Reserved</p>
+          </div>
+    </div>
+
+</div>
+
+
+
+</body>
+</html>

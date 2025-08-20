@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Quote Form with Swap</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+<!-- Bootstrap 5.3 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  
+
+
+
+
+<style>
+
+
+.marquee-container {
+  background: linear-gradient(to right, #3b2415, #a9742b);
+  color: white;
+  padding: 5px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  /* border-radius: 5px; */
+}
+
+.marquee {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 15s linear infinite;
+  font-size: 1.0rem;
+  font-weight:600;
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+
+
+
+    .get-quote-box {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0px 2px 15px rgba(0,0,0,0.1);
+      padding: 20px;
+      max-width: 900px;
+      /* margin: auto; */
+      height: 60vh;
+      margin-right: 267px;
+      margin-top: -30px;
+      
+    }
+    .form-control {
+      height: calc(2.5rem + 2px);
+      border-radius: 6px;
+    }
+    .swap-circle {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 50%;
+      width: 35px;
+      height: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      cursor: pointer;
+      color: #007bff;
+      transition: 0.3s;
+    }
+    .swap-circle:hover {
+      background: #007bff;
+      color: #fff;
+    }
+    .btn-quote {
+      background-color: #0056b3;
+      color: #fff;
+      font-weight: 500;
+      border-radius: 4px;
+      height: calc(2.5rem + 2px);
+    }
+    .btn-quote:hover {
+      background-color: #003f80;
+    }
+    .privacy-text {
+      font-size: 0.9rem;
+    }
+    hr {
+      margin: 1rem 0;
+    }
+    .remove-currency {
+      color: red;
+      cursor: pointer;
+      font-size: 18px;
+      padding-top: 10px;
+    }
+
+
+
+
+
+
+
+
+.buzz-service-section{
+    background-color: #ddd;
+    margin-bottom: 20px;
+}
+
+.buzz-service-card h4 {
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #3b2415;
+}
+
+.buzz-service-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.buzz-service-card ul li {
+  padding: 5px 0;
+  font-size: 15px;
+  position: relative;
+}
+
+
+.buzz-service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 25px rgba(0,0,0,0.15);
+}
+
+
+
+
+/*  */
+
+    .company-name{
+      text-align: center;
+    }
+    .forex-form-container{
+      background-image: url("https://res.cloudinary.com/dlcuxbo8m/image/upload/v1754734477/Palantir_raises_annual_revenue_forecast_on_booming_AI_demand_h5xxf5.jpg");
+      /* background-image: url("https://res.cloudinary.com/dlcuxbo8m/image/upload/v1754734477/Parceria_promete_agilizar_transfer%C3%AAncias_internacionais_reduzindo_custos_e_oferecendo_liquida%C3%A7%C3%B5es_em_tempo_real_via_bloc_s8tf2d.jpg"); */
+      background-size: cover;
+      height: 80vh;
+      padding: 70px;
+      margin-top: 0px;
+    }
+    
+
+    .get-quote-btn {
+      display: block;       /* full width lo treat avvali */
+      margin: 20px auto;    /* auto margins -> horizontal center */
+      padding: 10px 30px;   /* button size */
+      background-color: #005cbf;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      text-align: center;
+      
+  
+  }
+
+
+
+
+
+  /* ---------- RESPONSIVE FIXES ---------- */
+@media (max-width: 992px) {
+  .get-quote-box {
+    max-width: 100%;
+    margin: 20px auto;
+    height: auto;
+    padding: 15px;
+  }
+
+  .forex-form-container {
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .get-quote-btn {
+    width: 100%;
+    max-width: 300px; /* mobile lo kuda too wide kakunda */
+  }
+
+  .footer .container {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .marquee {
+    font-size: 0.9rem;
+  }
+
+  .get-quote-box {
+    margin: 10px auto;
+    padding: 15px;
+  }
+
+  .forex-form-container {
+    padding: 30px 15px;
+  }
+
+  .footer .logo {
+    height: 60px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 15px;
+    margin-right: 0;
+  }
+
+  .social-bar {
+    top: auto;
+    bottom: 10px;
+    right: 10px;
+    transform: none;
+    flex-direction: row;
+  }
+
+  .social-bar a {
+    border-radius: 25px;
+    width: 40px;
+    padding: 10px;
+  }
+
+  .social-bar a:hover {
+    width: 40px; /* mobile lo hover expand kakunda fixed size */
+  }
+
+  .social-bar a span {
+    display: none; /* text mobile lo vaddu, only icon */
+  }
+}
+
+@media (max-width: 576px) {
+  .get-quote-box {
+    padding: 10px;
+  }
+
+  .get-quote-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .footer-col h4 {
+    font-size: 18px;
+  }
+
+  #info-container h3 {
+    font-size: 18px;
+  }
+}
+
+
+
+
+/* Medium devices layout fix (768px – 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .extra-currency-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .extra-currency-row .form-group {
+    flex: 0 0 48%;   /* 2 items per row */
+    max-width: 48%;
+  }
+
+  /* INR + remove icon full width lo, neat alignment */
+  .extra-currency-row .form-group:last-child {
+    flex: 0 0 100%;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .extra-currency-row .remove-currency {
+    margin-left: 10px;
+    margin-top: 0;
+  }
+}
+
+
+
+
+
+  /* FOOTER-------r */
+.footer {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 50px 20px 20px;
+  position: relative;
+}
+
+.footer .container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 60px;
+  align-items: start;
+}
+
+.footer-col h4 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #f7c948;
+  margin-bottom: 15px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  color: #000000;
+  transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #f7c948;
+}
+
+.footer .logo {
+  height: 90px;
+  margin-top: 40px;
+}
+
+.details p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #000000;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin-inline: auto;
+  margin-right: 60px;
+}
+
+.footer-bottom .company-name {
+  margin-right: 0;
+  font-size: 14px;
+  color: #000000;
+}
+
+.company-name {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.forex-cards-container-big {
+  margin-bottom: 50px;
+}
+
+#info-container h3 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* ====================== SOCIAL BAR ====================== */
+.social-bar {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  z-index: 9999;
+}
+
+.social-bar a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 25px 0 0 25px;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+  width: 45px;
+  overflow: hidden;
+}
+
+.social-bar a:hover {
+  width: 150px;
+}
+
+.social-bar a i {
+  min-width: 25px;
+  text-align: center;
+}
+
+.social-bar a span {
+  margin-left: 8px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.social-bar a:hover span {
+  opacity: 1;
+}
+
+/* Social brand colors */
+.facebook:hover { background-color: #3b5998; }
+.twitter:hover { background-color: #1da1f2; }
+.instagram:hover { background-color: #e1306c; }
+.linkedin:hover { background-color: #0077b5; }
+.youtube:hover { background-color: #ff0000; }
+
+
+
+/* ====================== RESPONSIVE ====================== */
+@media (max-width: 992px) {
+  .footer .container {
+    gap: 40px;
+  }
+  .footer-bottom {
+    justify-content: center;
+    text-align: center;
+    margin-right: 0;
+  }
+  .footer .logo {
+    height: 75px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    text-align: center;
+    padding: 20px 10px; /* reduce padding */
+  }
+
+  .footer .container {
+    grid-template-columns: 1fr;
+    gap: 20px; /* reduce vertical spacing between sections */
+  }
+
+  .footer-col {
+    margin-bottom: 15px; /* less gap between sections */
+  }
+
+  .footer .logo {
+    height: 60px;
+    margin-top: 15px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 8px; /* less spacing */
+    margin-top: 15px;
+  }
+
+  /* ---- REMOVE bottom bar conversion ---- */
+  .social-bar {
+    position: absolute;  /* same as desktop */
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    flex-direction: column;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .social-bar a {
+    width: 45px;
+    border-radius: 25px 0 0 25px;
+    margin: 5px 0;
+    padding: 12px;
+    justify-content: flex-start;
+  }
+
+  .social-bar a span {
+    display: inline-block;
+    opacity: 0;
+  }
+
+  .social-bar a:hover span {
+    opacity: 1;
+  }
+}
+
+
+
+</style>
+
+
+</head>
+<body>
+
+<div class="marquee-container">
+  <div class="marquee">
+     Travel Smart with Buzz Forex     • Studying Abroad Made Simple      • International Money Transfers 
+  </div>
+</div>
+
+<div class="forex-form-container">
+
+
+    <div class="container">
+      <div class="get-quote-box">
+          <form>
+          <div id="currencySection">
+              <div class="form-row align-items-end">
+              <div class="form-group col-md-3">
+                  <label>Product</label>
+                  <select class="form-control" id="productSelect" onchange="handleProductChange()">
+                  <option>Remittance</option>
+                  <option>Travel Card</option>
+                  <option>Currency Exchange</option>
+                  <option>Currency Exchange(Multi)</option>
+                  </select>
+              </div>
+              <div class="form-group col-md-3">
+                  <label>Currency</label>
+                  <select class="form-control">
+                  <option>AED</option>
+                  <option>USD</option>
+                  <option>EUR</option>
+                  <option>THB</option>
+                  <option>GBP</option>
+                  <option>AUD</option>
+                  <option>CAD</option>
+                  <option>SAR</option>
+                  <option>SGD</option>
+                  <option>CNY</option>
+
+                  <option>MYR</option>
+                  <option>KWD</option>
+                  </select>
+              </div>
+              <div class="form-group col-md-3">
+                  <label id="forexLabel">Forex Amount</label>
+                  <input type="number" class="form-control" placeholder="Forex Amount" id="forexAmount">
+              </div>
+              <div class="form-group col-md-1 d-flex align-items-center justify-content-center">
+                  <div class="swap-circle" onclick="swapValues()">
+                  <i class="fas fa-exchange-alt"></i>
+                  </div>
+              </div>
+              <div class="form-group col-md-2">
+                  <label id="inrLabel">INR Amount</label>
+                  <input type="number" class="form-control" placeholder="Amount in INR" id="inrAmount">
+              </div>
+              </div>
+          </div>
+
+          <div id="addCurrencyBtnWrapper" style="display:none;">
+              <button type="button" class="btn btn-sm btn-outline-primary mb-3" onclick="addCurrencyRow()">+ Add Currency</button>
+          </div>
+
+          <hr>
+
+          <p class="mb-2"><strong>Communication Details</strong> <span class="text-muted">(Your order confirmation details will be sent on these contact details)</span></p>
+
+          <div class="form-row">
+              <div class="form-group col-md-4">
+              <input type="tel" class="form-control" placeholder="Mobile No.">
+              </div>
+              <div class="form-group col-md-4">
+              <input type="email" class="form-control" placeholder="Email Address">
+              </div>
+               <div class="form-group col-md-4">
+              <input type="country name" class="form-control" placeholder="Country Name">
+              </div>
+              <!-- <div class="form-group col-md-4">
+              <button type="submit" class="btn btn-quote btn-block">Get Quote</button>
+              </div> -->
+          </div>
+
+          <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="privacyCheck" required>
+              <label class="form-check-label privacy-text" for="privacyCheck">I accept the <a href="#">Privacy Policy</a></label>
+          </div>
+          
+
+          <div class="form-group col-md-4 ">
+              <button type="submit" class="btn btn-quote btn-block">Get Quote</button>
+          </div>
+          </form>
+      </div>
+    </div>
+
+    <script>
+    function swapValues() {
+    let forexInput = document.getElementById("forexAmount");
+    let inrInput = document.getElementById("inrAmount");
+    let forexLabel = document.getElementById("forexLabel");
+    let inrLabel = document.getElementById("inrLabel");
+
+    let tempValue = forexInput.value;
+    forexInput.value = inrInput.value;
+    inrInput.value = tempValue;
+
+    let tempPlaceholder = forexInput.placeholder;
+    forexInput.placeholder = inrInput.placeholder;
+    inrInput.placeholder = tempPlaceholder;
+
+    let tempLabel = forexLabel.innerText;
+    forexLabel.innerText = inrLabel.innerText;
+    inrLabel.innerText = tempLabel;
+    }
+
+    function handleProductChange() {
+    let product = document.getElementById("productSelect").value;
+    let addBtn = document.getElementById("addCurrencyBtnWrapper");
+    let currencySection = document.getElementById("currencySection");
+
+    if (product === "Currency Exchange(Multi)") {
+        addBtn.style.display = "block";
+    } else {
+        addBtn.style.display = "none";
+        let extraRows = document.querySelectorAll(".extra-currency-row");
+        extraRows.forEach(row => row.remove());
+    }
+    }
+
+    // function addCurrencyRow() {
+    // let row = document.createElement("div");
+    // row.className = "form-row align-items-end extra-currency-row";
+    // row.innerHTML = `
+    //     <div class="form-group col-md-3"></div>
+    //     <div class="form-group col-md-3">
+    //     <select class="form-control">
+    //         <option>AED</option>
+    //         <option>USD</option>
+    //         <option>EUR</option>
+    //     </select>
+    //     </div>
+    //     <div class="form-group col-md-3">
+    //     <input type="number" class="form-control" placeholder="Forex Amount">
+    //     </div>
+    //     <div class="form-group col-md-1"></div>
+    //     <div class="form-group col-md-2 d-flex">
+    //     <input type="number" class="form-control" placeholder="Amount in INR">
+    //     <span class="remove-currency ml-2" onclick="this.closest('.extra-currency-row').remove()">×</span>
+    //     </div>
+    // `;
+    // document.getElementById("currencySection").appendChild(row);
+    // }
+    function addCurrencyRow() {
+  let row = document.createElement("div");
+  row.className = "form-row align-items-end extra-currency-row";
+  row.innerHTML = `
+    <div class="form-group col-md-3 col-12"></div>
+    <div class="form-group col-md-3 col-12">
+      <select class="form-control">
+        <option>AED</option>
+        <option>USD</option>
+        <option>EUR</option>
+      </select>
+    </div>
+    <div class="form-group col-md-3 col-12">
+      <input type="number" class="form-control" placeholder="Forex Amount">
+    </div>
+    <div class="form-group col-md-1 col-12"></div>
+    <div class="form-group col-md-2 col-12 d-flex">
+      <input type="number" class="form-control" placeholder="Amount in INR">
+      <span class="remove-currency ml-2" onclick="this.closest('.extra-currency-row').remove()">×</span>
+    </div>
+  `;
+  document.getElementById("currencySection").appendChild(row);
+}
+
+  </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</div>
+
+<div>
+<!-- Section: Buzz Forex Services -->
+    <section class="buzz-services-section shadow py-5">
+    <div class="container">
+        <div class="row text-center">
+        <!-- Card 1 -->
+        <div class="col-md-6 mb-4">
+            <div class="buzz-service-card">
+            <h4>Travel Smart with Buzz Forex</h4>
+            <ul>
+                <li>Multi-Currency Travel Cards</li>
+                <li>International SIM Cards</li>
+                <li>Instant Forex for your next trip</li>
+                <li>Visa Fee Payments</li>
+            </ul>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-6 mb-4">
+            <div class="buzz-service-card">
+            <h4>Studying Abroad Made Simple</h4>
+            <ul>
+                <li>Tuition Fees</li>
+                <li>Living Expenses</li>
+                <li>Gifts & Maintenance</li>
+                <li>Guardian Support</li>
+            </ul>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-6 mb-4">
+            <div class="buzz-service-card">
+            <h4>International Money Transfers</h4>
+            <ul>
+                <li>Telegraphic Transfers (TT)</li>
+                <li>Authorized Money Transfer Services</li>
+                <li>Bank-to-Bank Remittances</li>
+            </ul>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-md-6 mb-4">
+            <div class="buzz-service-card">
+            <h4>Why Choose Buzz Forex?</h4>
+            <ul>
+                <li>RBI-Licensed & Trusted</li>
+                <li>Quick, Hassle-Free Transactions</li>
+                <li>Personalized Customer Service</li>
+                <li>Branch Network Across India</li>
+            </ul>
+            </div>
+        </div>
+        </div>
+    </div>
+    </section>
+</div>
+
+<!-- footer -->
+<div>
+   
+    <div class="footer shadow">
+        <div class="container">
+          <!-- Logo Column -->
+          <div class="footer-col logo-col">
+            <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1752835706/0654a2c4ddb72401ea6f457be00c5c6c_wz3rhc.png" alt="Buzz Groups Logo" class="logo">
+          </div>
+
+          <!-- Contact Details -->
+          <div class="footer-col">
+            <h4>Address</h4>
+            <div class="details">
+              <p>#6-3-1111/B</p>
+              <p>Shop No 5 & 6, Babukhan Mall,<br>Greenlands Road, Somajiguda, Hyderabad</p>
+              <p>Telangana - 500082</p>
+              <p>info@buzzgroups.in</p>
+              <p>(+91) 888 600 8060</p>
+            </div>
+          </div>
+
+          <!-- Services -->
+          <div class="footer-col">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="#">Buzz Holidayz</a></li>
+              <li><a href="#">Buzz Forex</a></li>
+              <li><a href="#">Buzz Finserve</a></li>
+              <li><a href="#">Streets Corner</a></li>
+              <li><a href="#">Buzz Digital</a></li>
+            </ul>
+          </div>
+
+          <!-- Information -->
+          <div class="footer-col">
+            <h4>Information</h4>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Our Team</a></li>
+              <li><a href="#">Franchise Enquiry</a></li>
+            </ul>
+          </div>
+        </div>
+
+    
+        <!-- Social Media Bar -->
+            <div class="social-bar">
+                <a href="https://www.facebook.com/reel/630032483128401/?app=fbl" class="facebook"><i class="fab fa-facebook-f"></i><span>Facebook</span></a>
+                <!-- <a href="#" class="twitter"><i class="fab fa-twitter"></i><span>Twitter</span></a> -->
+                <a href="https://www.instagram.com/reel/DEXRCApPjXC/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA==" class="instagram"><i class="fab fa-instagram"></i><span>Instagram</span></a>
+                <a href="https://www.linkedin.com/in/leads-buzz-8aab81309" class="linkedin"><i class="fab fa-linkedin-in"></i><span>LinkedIn</span></a>
+                <a href="https://www.youtube.com/@BuzzGroups-STK" class="youtube"><i class="fab fa-youtube"></i><span>YouTube</span></a>
+            </div>
+
+          <div>       
+          <p class="company-name">STK UNITY UMBRELLA LTD. All Rights Reserved</p>
+          </div>
+    </div>
+
+</div>
+
+
+</body>
+</html>

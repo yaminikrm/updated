@@ -1,0 +1,1420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Navbar with Icons</title>
+
+<!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  
+
+<style>
+
+  /* first navabar */
+  .navbar-conatiner-buzz-holidayz{
+        /* background-image: url("https://res.cloudinary.com/dlcuxbo8m/image/upload/v1754464492/download_42_vs1lae.png"); */
+        background-size: cover;
+        height:100vh;
+      }
+    .custom-navbar {
+      background: white;
+      border: 1px solid #cce5ff;
+      border-radius: 7px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 10px 20px;
+      width: 1000px; /* Increased width for new items */
+      margin: auto; /* Center horizontally */
+      gap:20px;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      color: black !important;
+      gap: 8px;
+    }
+        /* Gradient Icon Style */
+    .nav-link i {
+      font-size: 20px;
+      background: linear-gradient(to right, #fbc25b, #b9771e); /* Light gold to dark gold */
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* .nav-link i { */
+      /* font-size: 20px; */
+      /* color: #0d6efd; */
+    /* } */
+    .nav-link:hover {
+      transform: scale(1.05);
+      transition: 0.2s;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+
+ /* Remove background image section */
+    .navbar-overlay {
+      position: absolute;
+      top: 30px;
+      left: 0;
+      right: 0;
+      z-index: 10;
+    }
+
+    .custom-navbar {
+      background: white;
+      border: 1px solid #cce5ff;
+      border-radius: 7px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 10px 20px;
+      width: 1000px;
+      margin: auto;
+      gap: 20px;
+    }
+
+    .nav-link {
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      color: black !important;
+      gap: 8px;
+    }
+
+    .nav-link i {
+      font-size: 20px;
+      background: linear-gradient(to right, #fbc25b, #b9771e);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .nav-link:hover {
+      transform: scale(1.05);
+      transition: 0.2s;
+    }
+
+
+
+
+/* ✅ First navbar: Small devices lo 3 per row */
+@media (max-width: 768px) {
+  .custom-navbar {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 6px;  /* spacing between items */
+    padding: 9px; /* thaggincham */
+    row-gap: 0px;      /* rows madhya gap ni chinnaga chesam */
+    column-gap: 3px;   /* columns madhya chinna gap */
+  }
+
+  .nav-link {
+    justify-content: center;
+    text-align: center;
+    font-size: 10px;
+  }
+
+  .nav-link i {
+    font-size: 13px;    
+  }
+}
+
+
+
+
+
+
+
+
+/* second tablet navbar */
+  .second-tablet-bar-bg-container {
+    background-color: black;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  
+  .navbar-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 20px; /* space between the two tablets */
+      padding-top: 30px;
+      align-items: center;
+    
+    }
+   
+    
+    .custom-navbar-second {
+    background: white;
+    border: 1px solid #cce5ff;
+    border-radius: 45px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 10px;
+    width: 100%;        /* take full width on small screens */
+    max-width: 800px;   /* but never exceed 800px */
+    margin: auto;
+    margin-bottom: 30px;
+  }
+
+
+    .custom-navbar-first .nav-link,
+    .custom-navbar-second .nav-link {
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      color: black !important;
+      gap: 8px;
+    }
+    .custom-navbar-first .nav-link i,
+    .custom-navbar-second .nav-link i {
+      font-size: 20px;
+      background: linear-gradient(to right, #fbc25b, #b9771e);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .custom-navbar-first .nav-link:hover,
+    .custom-navbar-second .nav-link:hover {
+      transform: scale(1.05);
+      transition: 0.2s;
+    }
+  @media(min-width:768px){
+    .nav-icon-img{
+    width: 40px;  /* icon size */
+    height: 40px;
+    border-radius: 25px;
+
+    }
+
+
+}
+
+/* Force navbar items to wrap neatly on smaller devices */
+.custom-navbar-second .navbar-nav,
+.custom-navbar-second .nav,
+.custom-navbar-second .nav-list {
+  display: flex;
+  flex-wrap: wrap;         /* allow items to go to next line */
+  justify-content: center; /* keep them centered */
+  gap: 8px 12px;           /* spacing between items */
+}
+
+/* Each nav item should shrink and wrap */
+.custom-navbar-second .navbar-nav > .nav-item,
+.custom-navbar-second .nav > li,
+.custom-navbar-second .nav-list > li {
+  flex: 0 1 auto;
+}
+
+/* On very small phones (max 576px) – make two-column layout */
+@media (max-width: 576px) {
+  .custom-navbar-second .navbar-nav > .nav-item,
+  .custom-navbar-second .nav > li,
+  .custom-navbar-second .nav-list > li {
+    flex: 1 1 calc(50% - 12px); /* two items per row */
+    text-align: center;
+  }
+}
+   
+
+@media (max-width: 576px) {
+  .custom-navbar-second {
+    padding: 6px;
+    border-radius: 20px;  /* looks perfect once font/gap shrink */
+  }
+  .nav-icon-img {
+    width: 24px;
+    height: 24px;
+     border-radius: 50%; /* perfect circle image */
+    object-fit: cover;  /* avoids stretching */
+  }s
+  .custom-navbar-second .nav-link {
+    font-size: 12px; /* smaller text */
+    gap: 2px;        /* less spacing between icon & text */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* card */
+
+.offer-card {
+    position: fixed;
+    top: 80%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 180px;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    text-align: center; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Top wave section */
+.card-top { 
+    background-image: url("https://res.cloudinary.com/dlcuxbo8m/image/upload/v1754477586/_Travel__Sticker_for_Sale_by_Piotr_Loraj_ezuzla.jpg");
+    background-size: cover;
+    height: 70px;
+    border-bottom-left-radius: 50% 20px;
+    border-bottom-right-radius: 50% 20px;
+}
+
+/* Bottom text section */
+.card-bottom {
+    padding: 12px 10px;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #0078d7;
+    margin-bottom: 4px;
+    line-height: 1.2;
+}
+
+.subtitle {
+    font-size: 13px;
+    font-weight: 500;
+    color: #444;
+}
+
+/* Heartbeat animation */
+.heartbeat {
+    animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: translateY(-50%) scale(1); }
+    25% { transform: translateY(-50%) scale(1.05); }
+    50% { transform: translateY(-50%) scale(0.98); }
+    75% { transform: translateY(-50%) scale(1.03); }
+}
+
+
+
+
+/* international & domestic */
+
+
+    .international-domestic-cards-bg-big-container{
+      background-color: black;
+      color: white;
+      padding-bottom: 60px;
+    }
+
+    .head-1{
+      font-family:roboto;
+      padding-left: 30px;
+      padding-top: 30px;
+    }
+
+    .scroll-container {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      gap: 20px;
+      padding: 40px;
+    }
+
+    .scroll-container::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .scroll-container::-webkit-scrollbar-thumb {
+      background: #a9742b;
+      border-radius: 10px;
+    }
+
+    .card {
+      background-color: white;
+      width: 270px;
+      border-radius: 20px;
+      flex: 0 0 auto;
+      color: black;
+    }
+
+
+    .card-img-holidays-icon {
+        height: 250px;
+        width: 100%;
+        display: block;
+        object-fit: cover;
+        /* ✅ FIX: Use uniform border-radius */
+        border-radius: 20px;
+        /* ✅ FIX: Prevent spacing below image */
+        line-height: 0;
+        margin-bottom: 0;
+    }
+
+    .card-img-holidays-icon-button {
+      background: linear-gradient(to right, #3b2415, #a9742b 70%);
+      border-radius: 5px;
+      padding: 5px;
+      font-size: 10px;
+      width: 86px;
+      border-style: none;
+      color: white;
+    }
+
+    .content-bali {
+      font-family: Roboto, sans-serif;
+      font-size: 13px;
+      padding: 0 10px;
+      text-align: center;
+    }
+
+    .bali-heading {
+      font-family: Roboto, sans-serif;
+      padding-top: 10px;
+      font-size: 27px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .bali-button-container {
+      padding-bottom: 8px;
+      text-align: center;
+    }
+
+    .imp-contnet {
+      font-family: Helvetica, sans-serif;
+      color: #a9742b;
+      font-weight: bold;
+      font-size: 15px;
+      display: inline-block;
+      margin-top: 8px;
+      text-align: center;
+    }
+    .space-one-international{
+      margin-bottom: 75px;
+    }
+
+
+
+
+
+
+
+/* whybuuzzgroups 5 points */
+    .container-background{
+      background-color: black;
+      min-height: 45vh;
+      padding-top: 15px;
+    }
+
+    .features {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 40px;
+    }
+
+    .line {
+      display: flex;
+      justify-content: center;
+      gap: 190px;
+      flex-wrap: wrap;
+    }
+
+    .line h1 {
+      font-size: 1.2em;
+      margin: 0;
+      
+    }
+    .feature-item {
+      position: relative;
+      padding-left: 25px;
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .feature-item::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 10px;
+      width: 10px;
+      /* background-color: white; */
+      border-radius: 50%;
+    }
+
+
+
+  .why-buzz-holidayz-attractive-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px; /* space between elements */
+    font-size: 36px; /* bigger text for the whole sentence */
+    font-family: 'Roboto', sans-serif;
+    flex-wrap: wrap;
+    text-align: center;
+    color: aliceblue;
+}
+
+.gradient-text {
+  background: linear-gradient(45deg, #d4af37, #b8860b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.fancy-font {
+  /* font-family: 'Parisienne', cursive; */
+  /* font-family: 'Brush Script MT', cursive; */
+    font-family: 'Parisienne', cursive;
+
+}
+
+.bold-letter {
+  font-weight: bold;
+  font-size: 42px;
+}
+
+.h-letter {
+  margin-left: 9px; /* extra space before H */
+}
+
+.underlined {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.space-around {
+  margin: 0 10px; /* 4px space before and after */
+}
+
+.bold-letter {
+  margin-right: -8px; /* pulls "uzz" closer to B */
+}
+
+
+.feature-item {
+  position: relative;
+  padding-left: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideUp 0.6s ease forwards;
+}
+
+/* Staggered animation delay */
+.line:nth-child(1) .feature-item:nth-child(1) { animation-delay: 0.2s; }
+.line:nth-child(1) .feature-item:nth-child(2) { animation-delay: 0.4s; }
+.line:nth-child(1) .feature-item:nth-child(3) { animation-delay: 0.6s; }
+.line:nth-child(2) .feature-item:nth-child(1) { animation-delay: 0.8s; }
+.line:nth-child(2) .feature-item:nth-child(2) { animation-delay: 1s; }
+
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+/* Base state - hidden */
+.feature-item {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* Animate state */
+.animate .feature-item {
+  animation: fadeSlideUp 0.6s ease forwards;
+}
+
+.animate .line:nth-child(1) .feature-item:nth-child(1) { animation-delay: 0.2s; }
+.animate .line:nth-child(1) .feature-item:nth-child(2) { animation-delay: 0.4s; }
+.animate .line:nth-child(1) .feature-item:nth-child(3) { animation-delay: 0.6s; }
+.animate .line:nth-child(2) .feature-item:nth-child(1) { animation-delay: 0.8s; }
+.animate .line:nth-child(2) .feature-item:nth-child(2) { animation-delay: 1s; }
+
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* For small devices */
+@media (max-width: 768px) {
+  .line {
+    flex-direction: column;
+    gap: 15px; /* space between items */
+    align-items: center; /* center them */
+  }
+
+  .line h1 {
+    font-size: 16px; /* smaller text for mobile */
+    text-align: center;
+  }
+
+  .features {
+    gap: 20px; /* space between lines */
+    margin-top: 20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+  /* FOOTER-------r */
+.footer {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 50px 20px 20px;
+  position: relative;
+}
+
+.footer .container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 60px;
+  align-items: start;
+}
+
+.footer-col h4 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #f7c948;
+  margin-bottom: 15px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  color: #000000;
+  transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #f7c948;
+}
+
+.footer .logo {
+  height: 90px;
+  margin-top: 40px;
+}
+
+.details p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #000000;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin-inline: auto;
+  margin-right: 60px;
+}
+
+.footer-bottom .company-name {
+  margin-right: 0;
+  font-size: 14px;
+  color: #000000;
+}
+
+.company-name {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.forex-cards-container-big {
+  margin-bottom: 50px;
+}
+
+#info-container h3 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* ====================== SOCIAL BAR ====================== */
+.social-bar {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  z-index: 9999;
+}
+
+.social-bar a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 25px 0 0 25px;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+  width: 45px;
+  overflow: hidden;
+}
+
+.social-bar a:hover {
+  width: 150px;
+}
+
+.social-bar a i {
+  min-width: 25px;
+  text-align: center;
+}
+
+.social-bar a span {
+  margin-left: 8px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.social-bar a:hover span {
+  opacity: 1;
+}
+
+/* Social brand colors */
+.facebook:hover { background-color: #3b5998; }
+.twitter:hover { background-color: #1da1f2; }
+.instagram:hover { background-color: #e1306c; }
+.linkedin:hover { background-color: #0077b5; }
+.youtube:hover { background-color: #ff0000; }
+
+
+
+/* ====================== RESPONSIVE ====================== */
+@media (max-width: 992px) {
+  .footer .container {
+    gap: 40px;
+  }
+  .footer-bottom {
+    justify-content: center;
+    text-align: center;
+    margin-right: 0;
+  }
+  .footer .logo {
+    height: 75px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    text-align: center;
+    padding: 20px 10px; /* reduce padding */
+  }
+
+  .footer .container {
+    grid-template-columns: 1fr;
+    gap: 20px; /* reduce vertical spacing between sections */
+  }
+
+  .footer-col {
+    margin-bottom: 15px; /* less gap between sections */
+  }
+
+  .footer .logo {
+    height: 60px;
+    margin-top: 15px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 8px; /* less spacing */
+    margin-top: 15px;
+  }
+
+  /* ---- REMOVE bottom bar conversion ---- */
+  .social-bar {
+    position: absolute;  /* same as desktop */
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    flex-direction: column;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .social-bar a {
+    width: 45px;
+    border-radius: 25px 0 0 25px;
+    margin: 5px 0;
+    padding: 12px;
+    justify-content: flex-start;
+  }
+
+  .social-bar a span {
+    display: inline-block;
+    opacity: 0;
+  }
+
+  .social-bar a:hover span {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+.difference-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;        /* desktop lo madhya space */
+  margin-top: 20px;
+  flex-wrap: wrap;  /* wrap avvadani ki */
+}
+
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Tablet view (medium devices) */
+@media (max-width: 992px) {
+  .difference-container {
+    gap: 40px;
+  }
+  .responsive-img {
+    max-width: 45%;   /* side-by-side */
+  }
+}
+
+/* Mobile view (small devices) */
+@media (max-width: 576px) {
+  .difference-container {
+    flex-direction: column;  /* row → column */
+    gap: 20px;               /* vertical gap */
+  }
+  .responsive-img {
+    max-width: 90%;   /* screen lo neat ga fit avvali */
+  }
+}
+
+
+</style>
+
+
+</head>
+<body>
+
+
+<!-- Carousel -->
+<div id="autoCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+  
+  <!-- Navbar overlay on carousel -->
+  <div class="navbar-overlay">
+    <div class="container">
+      <ul class="nav justify-content-center custom-navbar">
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fas fa-plane"></i> Flight Tickets</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fas fa-passport"></i> Tourist Visa</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fas fa-id-card"></i> Passports</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fas fa-hotel"></i> Hotels</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fas fa-plane-departure"></i> Flights + Hotel</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fas fa-umbrella-beach"></i> Holidayz</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1755084980/WhatsApp_Image_2025-08-06_at_1.10.58_PM_e86fei.jpg" class="d-block w-100" alt="Slide 1">
+    </div>
+    <div class="carousel-item">
+      <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1755085211/WhatsApp_Image_2025-08-06_at_1.31.15_PM_mehwzs.jpg" class="d-block w-100" alt="Slide 2">
+    </div>
+    <div class="carousel-item">
+      <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1755085501/WhatsApp_Image_2025-08-06_at_1.55.55_PM_xytjl4.jpg" class="d-block w-100" alt="Slide 3">
+    </div>
+    <div class="carousel-item">
+      <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1755085645/WhatsApp_Image_2025-08-06_at_1.35.58_PM_1_k9hhos.jpg" class="d-block w-100" alt="Slide 4">
+    </div>
+    <div class="carousel-item">
+      <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1755087127/Come_To_Japan_sxmveq.png" class="d-block w-100" alt="Slide 5">
+    </div>
+    <div class="carousel-item">
+      <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1755086925/kenya_safari_1_dd4txb.png" class="d-block w-100" alt="Slide 6">
+    </div>
+  </div>
+</div>
+
+
+
+<div>
+
+  <div class="second-tablet-bar-bg-container">
+          <!-- Second Row -->
+          <ul class="nav justify-content-center custom-navbar-second">
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1754460448/travel_ioevma.jpg" alt="Honeymoon" class="nav-icon-img"> Honeymoon
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1754460683/download_31_g7dei2.jpg" alt="Pilgrimage" class="nav-icon-img"> Pilgrimage
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1754462025/Follow_me_for_more_under__http___bit_ly_2AsPyMu_OR_check_out_my_blog_under__www.alphalif3style_n459uo.jpg" alt="Luxury" class="nav-icon-img"> Luxury
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1754462893/Foggy_Hiking_Adventure_fzbvh1.jpg" alt="Adventure" class="nav-icon-img"> Adventure
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1754462893/MICE_-_Meetings_Incentives_Conferences_Exhibitions_kv66su.jpg" alt="MICE" class="nav-icon-img"> MICE
+              </a>
+            </li>
+          </ul>
+  </div>
+  
+
+</div>
+
+
+<div>            
+  <div class="international-domestic-cards-bg-big-container">      
+    <div class="space-one-international">   
+      <h1 class="head-1">INTERNATIONAL DESTINATIONS</h1>
+      <div class="scroll-container">
+          <!-- Repeatable Card -->
+          
+          <div class="card">
+            <h1 class="bali-heading">BALI</h1>
+            <div class="bali-button-container">
+              <button class="card-img-holidays-icon-button">4 Nights / 5 Days</button>
+            </div>
+            <p class="content-bali">
+              Dive into Crystal Bay, swing above jungles in Ubud, or chase sunsets at Tanah Lot.<br/>
+              <span class="imp-contnet">✨ Bali isn't just a place it's a feeling. Come feel it.</span>
+            </p>
+            <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1754485329/15_Amazing_Things_I_Love_About_Bali_g8mibl.jpg" class="card-img-holidays-icon"/>
+          </div>
+
+          <div class="card">
+            <h1 class="bali-heading">VIETNAM</h1>
+            <div class="bali-button-container">
+              <button class="card-img-holidays-icon-button">5 Nights / 6 Days</button>
+            </div>
+            <p class="content-bali">
+              Discover limestone islands in Halong Bay, lantern-lit streets in Hoi An.<br/>
+              <span class="imp-contnet">✨ Vietnam’s charm unfolds in every corner.</span>
+            </p>
+            <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1754550508/%D0%94%D0%B0%D0%BD%D0%B0%D0%BD%D0%B3_%D0%92%D1%8C%D0%B5%D1%82%D0%BD%D0%B0%D0%BC_%D0%90%D0%B2%D1%82%D0%BE%D1%80_%D1%81%D0%BD%D0%B8%D0%BC%D0%BA%D0%B0_trotteavecnous_ikxpgg.jpg" class="card-img-holidays-icon"/>
+          </div>
+
+          <div class="card">
+            <h1 class="bali-heading">SRILANKA</h1>
+            <div class="bali-button-container">
+              <button class="card-img-holidays-icon-button">4 Nights / 5 Days</button>
+            </div>
+            <p class="content-bali">
+              Beaches, tea trails & temples — Sri Lanka has it all.<br/>
+              <span class="imp-contnet">✨ Nature and culture in perfect balance.</span>
+            </p>
+            <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1754550756/Experience_the_Thrill_of_Elephant_Spotting_in_Sri_Lanka_s_Yala_National_Park_tuhobn.jpg" class="card-img-holidays-icon"/>
+          </div>
+
+          <div class="card">
+            <h1 class="bali-heading">ALMATY</h1>
+            <div class="bali-button-container">
+              <button class="card-img-holidays-icon-button">5 Nights / 6 Days</button>
+            </div>
+            <p class="content-bali">
+              Snowy peaks, green valleys, and Eastern hospitality.<br/>
+              <span class="imp-contnet">✨ Almaty is where nature whispers stories.</span>
+            </p>
+            <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1754550863/download_43_cpgl54.jpg" class="card-img-holidays-icon"/>
+          </div>
+
+          <div class="card">
+            <h1 class="bali-heading">EUROPE</h1>
+            <div class="bali-button-container">
+              <button class="card-img-holidays-icon-button">7 Nights / 8 Days</button>
+            </div>
+            <p class="content-bali">
+              Paris, Rome, Amsterdam – history & romance combined.<br/>
+              <span class="imp-contnet">✨ Europe is every traveler's dream.</span>
+            </p>
+            <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1754551055/download_45_qjxq97.jpg" class="card-img-holidays-icon"/>
+          </div>
+
+          <div class="card">
+            <h1 class="bali-heading">DUBAI</h1>
+            <div class="bali-button-container">
+              <button class="card-img-holidays-icon-button">5 Nights / 6 Days</button>
+            </div>
+            <p class="content-bali">
+              Soar above the Burj Khalifa, feel the thrill of Dubai’s golden deserts a city like no other.<br/>
+              <span class="imp-contnet">✨  Dubai is every explorer’s fantasy.</span>
+            </p>
+            <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1754551243/Travel_Inspo_o23kbt.jpg" class="card-img-holidays-icon"/>
+          </div>
+          
+          <div class="card">
+            <h1 class="bali-heading">BANGKOK</h1>
+            <div class="bali-button-container">
+              <button class="card-img-holidays-icon-button">4 Nights / 5 Days</button>
+            </div>
+            <p class="content-bali">
+              Street food, temples, nightlife — Bangkok is alive.<br/>
+              <span class="imp-contnet">✨  Dive into soulful, magical Thai culture.</span>
+            </p>
+            <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1754551656/Wat_Paknam_Bhasicharoen__z4604b.jpg" class="card-img-holidays-icon"/>
+          </div>
+          
+          <div class="card">
+            <h1 class="bali-heading">TURKEY</h1>
+            <div class="bali-button-container">
+              <button class="card-img-holidays-icon-button">5 Nights / 6 Days</button>
+            </div>
+            <p class="content-bali">
+              From Cappadocia balloons to Bosphorus nights.<br/>
+              <span class="imp-contnet">✨ Turkey unites continents and cultures.</span>
+            </p>
+            <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1754551750/Beautiful_skies_of_the_Turkish_balloon_festival_cfmppt.jpg" class="card-img-holidays-icon"/>
+          </div>
+
+          <div class="card">
+            <h1 class="bali-heading">SINGAPORE</h1>
+            <div class="bali-button-container">
+              <button class="card-img-holidays-icon-button">4 Nights / 5 Days</button>
+            </div>
+            <p class="content-bali">
+              Gardens by the Bay to futuristic cityscapes.<br/>
+              <span class="imp-contnet">✨ Singapore a tiny island packed with world class wonders.</span>
+            </p>
+            <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1754551843/download_46_u4bnfi.jpg" class="card-img-holidays-icon"/>
+          </div>
+          
+          <div class="card">
+            <h1 class="bali-heading">MALAYSIA</h1>
+            <div class="bali-button-container">
+              <button class="card-img-holidays-icon-button">3 Nights / 4 Days</button>
+            </div>
+            <p class="content-bali">
+              Colonial charm, Petronas Towers, and tropical vibes.<br/>
+              <span class="imp-contnet">✨  Discover the true spirit of Asia in Malaysia.</span>
+            </p>
+            <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1754552434/Batu_Caves_Malaysia_eekdy1.jpg" class="card-img-holidays-icon"/>
+          </div>
+      
+          <div class="card">
+            <h1 class="bali-heading">CAMBODIA</h1>
+            <div class="bali-button-container">
+              <button class="card-img-holidays-icon-button">4 Nights / 5 Days</button>
+            </div>
+            <p class="content-bali">
+              Explore Angkor Wat, floating villages & more.<br/>
+              <span class="imp-contnet">✨ Timeless temples, vibrant spirit that’s Cambodia.</span>
+            </p>
+            <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1754552922/Experience_the_Magic_of_Angkor_Wat_at_Sunrise_eevqqp.jpg" class="card-img-holidays-icon"/>
+          </div>
+
+          <div class="card">
+            <h1 class="bali-heading">BAKU</h1>
+            <div class="bali-button-container">
+              <button class="card-img-holidays-icon-button">4 Nights / 5 Days</button>
+            </div>
+            <p class="content-bali">
+              Flame towers, Caspian coastlines, rich history.<br/>
+              <span class="imp-contnet">✨ Baku is the gem of the Caucasus.</span>
+            </p>
+            <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1754553026/download_48_d1tm3c.jpg" class="card-img-holidays-icon"/>
+          </div>
+      </div>
+    </div>
+
+
+    <div class="space-one-international">   
+      <h1 class="head-1">DOMESTIC DESTINATIONS</h1>
+      <div class="scroll-container">
+          <!-- Repeatable Card -->
+          
+          <div class="card">
+            <h1 class="bali-heading">KERALA</h1>
+            <div class="bali-button-container">
+              <button class="card-img-holidays-icon-button">4 Nights / 5 Days</button>
+            </div>
+            <p class="content-bali">
+              Lush backwaters, misty hills, and timeless traditions.<br/>
+              <span class="imp-contnet">✨ Kerala is where serenity finds its voice.</span>
+            </p>
+            <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1754559579/The_Kerala_retreat__indian_kerala_travel_j16d5n.jpg" class="card-img-holidays-icon"/>
+          </div>
+
+          <div class="card">
+            <h1 class="bali-heading">GOA</h1>
+            <div class="bali-button-container">
+              <button class="card-img-holidays-icon-button">3 Nights / 4 Days</button>
+            </div>
+            <p class="content-bali">
+              Golden beaches, vibrant nights, and a carefree soul.<br/>
+              <span class="imp-contnet">✨ Goa is where every sunset feels alive.</span>
+            </p>
+            <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1754559865/Baobabs_Beaches_-_Avenue_of_Baobabs_Turks_and_Caicos__Home_Remodel____yjcr8n.jpg" class="card-img-holidays-icon"/>
+          </div>
+
+
+          <div class="card">
+            <h1 class="bali-heading">DARJEELING</h1>
+            <div class="bali-button-container">
+              <button class="card-img-holidays-icon-button">5 Nights / 6 Days</button>
+            </div>
+            <p class="content-bali">
+              Rolling tea gardens, crisp mountain air, and colonial charm.<br/>
+              <span class="imp-contnet">✨ Darjeeling is where the hills sip serenity.</span>
+            </p>
+            <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1754560283/download_50_wqufxh.jpg" class="card-img-holidays-icon"/>
+          </div>
+
+          <div class="card">
+            <h1 class="bali-heading">SHIMLA</h1>
+            <div class="bali-button-container">
+              <button class="card-img-holidays-icon-button">5 Nights / 6 Days</button>
+            </div>
+            <p class="content-bali">
+              Pine forests, snowy trails, and colonial echoes.<br/>
+              <span class="imp-contnet">✨ Shimla is where winter romance begins.</span>
+            </p>
+            <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1754560184/Shimla_a72rqp.jpg" class="card-img-holidays-icon"/>
+          </div>
+
+          <div class="card">
+            <h1 class="bali-heading">ANDAMAN</h1>
+            <div class="bali-button-container">
+              <button class="card-img-holidays-icon-button">4 Nights / 5 Days</button>
+            </div>
+            <p class="content-bali">
+              Turquoise waters, hidden coves, and island calm.<br/>
+              <span class="imp-contnet">✨  Andaman is where the ocean breathes peace.</span>
+            </p>
+            <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1754561285/download_52_oshrvc.jpg" class="card-img-holidays-icon"/>
+          </div>
+
+          <div class="card">
+            <h1 class="bali-heading">LADAKH</h1>
+            <div class="bali-button-container">
+              <button class="card-img-holidays-icon-button">5 Nights / 6 Days</button>
+            </div>
+            <p class="content-bali">
+              Majestic monasteries, rugged landscapes, and silent skies.<br/>
+              <span class="imp-contnet">✨  Ladakh is where the earth touches the heavens.</span>
+            </p>
+            <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1754560475/download_51_ook3y0.jpg" class="card-img-holidays-icon"/>
+          </div>
+          
+          <div class="card">
+            <h1 class="bali-heading">GUJARAT</h1>
+            <div class="bali-button-container">
+              <button class="card-img-holidays-icon-button">5 Nights / 6 Days</button>
+            </div>
+            <p class="content-bali">
+              Timeless temples, vibrant festivals, and desert whispers.<br/>
+              <span class="imp-contnet">✨  Gujarat is where heritage dances with color.</span>
+            </p>
+            <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1754560713/Statue_of_Unity_tnayel.jpg" class="card-img-holidays-icon"/>
+          </div>
+          
+          <div class="card">
+            <h1 class="bali-heading">GOLDEN TRIANGLE</h1>
+            <div class="bali-button-container">
+              <button class="card-img-holidays-icon-button">5 Nights / 6 Days</button>
+            </div>
+            <p class="content-bali">
+              Royal forts, timeless love, and bustling bazaars.<br/>
+              <span class="imp-contnet">✨ The Golden Triangle is where history lives grand.</span>
+            </p>
+            <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1754560817/What_is_life_like_in_India__Here_are_9_important_life_lessons_I_learned_as_an_expat_living_in_india_hptjlq.jpg" class="card-img-holidays-icon"/>
+          </div>
+
+
+      </div>
+    </div>
+
+
+
+
+    <div class="container-background">
+      <h1 class="why-buzz-holidayz-attractive-heading">
+        <span class="first-part space-around">Why </span>
+        <span class="gradient-text fancy-font bold-letter">B</span>
+        <span class="underlined space-around">uzz</span>
+        <span class="gradient-text fancy-font bold-letter h-letter">H</span>
+        <span class="underlined">olidayz</span>
+        <span class="last-part"> as your travel partner</span>
+      </h1>
+
+      <div class="difference-container">
+        <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1755668757/247_Support_Customized_Packages_Instant_Bookings__2_-removebg-preview_oizx0w.png" 
+        alt="Responsive Image" 
+        class="responsive-img"/>
+         <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1755668804/247_Support_Customized_Packages_Instant_Bookings__2_-removebg-preview_xv7los.png" 
+        alt="Responsive Image" 
+        class="responsive-img"/>
+      </div>
+<!-- <div class="features">
+            <div class="line">
+              <h1 class="feature-item">Tailor Made Packages</h1>
+              <h1 class="feature-item">Global Destinations</h1>
+              <h1 class="feature-item">24/7 Support</h1>
+            </div>
+            <div class="line mt-4">
+              <h1 class="feature-item">Instant Booking</h1>
+              <h1 class="feature-item">Trusted By Thousands</h1>
+            </div>
+      </div>
+        -->
+    </div>
+
+    
+  </div>
+  
+  
+
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const section = document.querySelector(".features");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Remove and re-add the animate class to restart animation
+          section.classList.remove("animate");
+          void section.offsetWidth; // 🔹 Force reflow
+          section.classList.add("animate");
+        } else {
+          section.classList.remove("animate");
+        }
+      });
+    }, { threshold: 0.3 });
+
+    observer.observe(section);
+  });
+  </script>
+
+  <script>
+    const autoScrollContainers = document.querySelectorAll(".scroll-container");
+
+    autoScrollContainers.forEach(container => {
+      let scrollAmount = 1; // scroll speed
+      let maxScroll = container.scrollWidth - container.clientWidth;
+
+      function autoScroll() {
+        if (container.scrollLeft >= maxScroll - scrollAmount) {
+          container.scrollLeft = maxScroll; // stop exactly at end
+          clearInterval(scrollInterval); // stop scrolling
+        } else {
+          container.scrollLeft += scrollAmount;
+        }
+      }
+
+      let scrollInterval = setInterval(autoScroll, 30); // control speed
+
+      // Only pause/resume on drag/swipe (not hover)
+      container.addEventListener("mousedown", () => clearInterval(scrollInterval));
+      container.addEventListener("mouseup", () => {
+        if (container.scrollLeft < maxScroll) {
+          scrollInterval = setInterval(autoScroll, 30);
+        }
+      });
+
+      container.addEventListener("touchstart", () => clearInterval(scrollInterval));
+      container.addEventListener("touchend", () => {
+        if (container.scrollLeft < maxScroll) {
+          scrollInterval = setInterval(autoScroll, 30);
+        }
+      });
+    });
+  </script> 
+</div>
+
+
+
+<!-- side card -->
+ <div>          
+  <a href="https://buzzforex.in/" target="_blank">
+    <div class="offer-card heartbeat">
+      <div class="card-top"></div>
+      <div class="card-bottom">
+        <div class="title">Exotic Destinations</div>
+        <div class="subtitle">On special offer</div>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+
+
+
+<!-- footer -->
+<div>
+   
+    <div class="footer shadow">
+        <div class="container">
+          <!-- Logo Column -->
+          <div class="footer-col logo-col">
+            <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1752835706/0654a2c4ddb72401ea6f457be00c5c6c_wz3rhc.png" alt="Buzz Groups Logo" class="logo">
+          </div>
+
+          <!-- Contact Details -->
+          <div class="footer-col">
+            <h4>Address</h4>
+            <div class="details">
+              <p>#6-3-1111/B</p>
+              <p>Shop No 5 & 6, Babukhan Mall,<br>Greenlands Road, Somajiguda, Hyderabad</p>
+              <p>Telangana - 500082</p>
+              <p>info@buzzgroups.in</p>
+              <p>(+91) 888 600 8060</p>
+            </div>
+          </div>
+
+          <!-- Services -->
+          <div class="footer-col">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="#">Buzz Holidayz</a></li>
+              <li><a href="#">Buzz Forex</a></li>
+              <li><a href="#">Buzz Finserve</a></li>
+              <li><a href="#">Streets Corner</a></li>
+              <li><a href="#">Buzz Digital</a></li>
+            </ul>
+          </div>
+
+          <!-- Information -->
+          <div class="footer-col">
+            <h4>Information</h4>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Our Team</a></li>
+              <li><a href="#">Franchise Enquiry</a></li>
+            </ul>
+          </div>
+        </div>
+
+    
+        <!-- Social Media Bar -->
+            <div class="social-bar">
+                <a href="https://www.facebook.com/reel/630032483128401/?app=fbl" class="facebook"><i class="fab fa-facebook-f"></i><span>Facebook</span></a>
+                <a href="https://www.instagram.com/reel/DEXRCApPjXC/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA==" class="instagram"><i class="fab fa-instagram"></i><span>Instagram</span></a>
+                <a href="https://www.linkedin.com/in/leads-buzz-8aab81309" class="linkedin"><i class="fab fa-linkedin-in"></i><span>LinkedIn</span></a>
+                <a href="https://www.youtube.com/@BuzzGroups-STK" class="youtube"><i class="fab fa-youtube"></i><span>YouTube</span></a>
+            </div>
+
+          <div>       
+          <p class="company-name">STK UNITY UMBRELLA LTD. All Rights Reserved</p>
+          </div>
+    </div>
+
+</div>
+
+
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+</body>
+</html>

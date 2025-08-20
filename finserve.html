@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insurance Cards with Images</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background: #f5f8fb;
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #333;
+  }
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 25px;
+    justify-items: center;
+  }
+  .card {
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    transition: transform 0.2s ease, background 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+    /* width: 100px; */
+    width: 100%;  /* 👈 100px ni remove chesi 100% cheyyali */
+  max-width: 200px; /* optional, cards ekkuva big kakunda */
+
+    
+}
+
+  }
+  .card:hover {
+    background: #e8f5ff;
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  .card i {
+    font-size: 32px;
+    margin-bottom: 10px;
+    display: block;
+    color: #007BFF;
+  }
+  .info-container {
+    margin-top: 30px;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  .info-container img {
+    max-width: 400px;
+    border-radius: 10px;
+    flex-shrink: 0;
+  }
+  .info-text {
+    flex: 1;
+    text-align: center;
+    line-height: 1.6;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* footer */
+
+        /* FOOTER-------r */
+.footer {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 50px 20px 20px;
+  position: relative;
+}
+
+.footer .container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 60px;
+  align-items: start;
+}
+
+.footer-col h4 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #f7c948;
+  margin-bottom: 15px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  color: #000000;
+  transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #f7c948;
+}
+
+.footer .logo {
+  height: 90px;
+  margin-top: 40px;
+}
+
+.details p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #000000;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin-inline: auto;
+  margin-right: 60px;
+}
+
+.footer-bottom .company-name {
+  margin-right: 0;
+  font-size: 14px;
+  color: #000000;
+}
+
+.company-name {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.forex-cards-container-big {
+  margin-bottom: 50px;
+}
+
+#info-container h3 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* ====================== SOCIAL BAR ====================== */
+.social-bar {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  z-index: 9999;
+}
+
+.social-bar a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 25px 0 0 25px;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+  width: 45px;
+  overflow: hidden;
+}
+
+.social-bar a:hover {
+  width: 150px;
+}
+
+.social-bar a i {
+  min-width: 25px;
+  text-align: center;
+}
+
+.social-bar a span {
+  margin-left: 8px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.social-bar a:hover span {
+  opacity: 1;
+}
+
+/* Social brand colors */
+.facebook:hover { background-color: #3b5998; }
+.twitter:hover { background-color: #1da1f2; }
+.instagram:hover { background-color: #e1306c; }
+.linkedin:hover { background-color: #0077b5; }
+.youtube:hover { background-color: #ff0000; }
+
+
+
+/* ====================== RESPONSIVE ====================== */
+@media (max-width: 992px) {
+  .footer .container {
+    gap: 40px;
+  }
+  .footer-bottom {
+    justify-content: center;
+    text-align: center;
+    margin-right: 0;
+  }
+  .footer .logo {
+    height: 75px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    text-align: center;
+    padding: 20px 10px; /* reduce padding */
+  }
+
+  .footer .container {
+    grid-template-columns: 1fr;
+    gap: 20px; /* reduce vertical spacing between sections */
+  }
+
+  .footer-col {
+    margin-bottom: 15px; /* less gap between sections */
+  }
+
+  .footer .logo {
+    height: 60px;
+    margin-top: 15px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 8px; /* less spacing */
+    margin-top: 15px;
+  }
+
+  /* ---- REMOVE bottom bar conversion ---- */
+  .social-bar {
+    position: absolute;  /* same as desktop */
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    flex-direction: column;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .social-bar a {
+    width: 45px;
+    border-radius: 25px 0 0 25px;
+    margin: 5px 0;
+    padding: 12px;
+    justify-content: flex-start;
+  }
+
+  .social-bar a span {
+    display: inline-block;
+    opacity: 0;
+  }
+
+  .social-bar a:hover span {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+
+/* Floating Get Quotation Button */
+#getQuoteBtn, #openQuoteBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 50px;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+#openQuoteBtn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Popup Box */
+#quotePopup {
+  display: none;
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  width: 300px;
+  background: white;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  padding: 15px;
+  z-index: 1100;
+  animation: slideUp 0.3s ease-out;
+}
+
+/* Popup Header */
+#quotePopup h5 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+#closeQuoteBtn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #888;
+  transition: color 0.2s ease;
+}
+
+#closeQuoteBtn:hover {
+  color: #000;
+}
+
+/* Input Fields */
+#quotePopup input {
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  padding: 8px;
+  font-size: 14px;
+}
+
+#quotePopup input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0,123,255,0.3);
+}
+
+/* Submit Button */
+#quotePopup button[type="submit"] {
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+#quotePopup button[type="submit"]:hover {
+  background: #218838;
+}
+
+/* Animation */
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  #quotePopup {
+    width: 90%;
+    right: 5%;
+    bottom: 80px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==================== RESPONSIVE FIXES ==================== */
+
+/* Cards resize nicely */
+@media (max-width: 576px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row */
+    gap: 15px;
+  }
+
+  .card {
+    width: 100%;              /* full width of grid cell */
+    max-width: 160px;         /* not too big */
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .card i {
+    font-size: 26px;
+    margin-bottom: 6px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  /* Info Section */
+  .info-container {
+    flex-direction: column;    /* stack image + text */
+    padding: 15px;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .info-container img {
+    max-width: 100%;           /* shrink image */
+    height: auto;
+  }
+
+  .info-text {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  /* Floating Button */
+  #getQuoteBtn, #openQuoteBtn {
+    padding: 10px 16px;
+    font-size: 14px;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  /* Popup Box */
+  #quotePopup {
+    width: 90%;         /* full screen feel */
+    right: 5%;
+    bottom: 70px;
+    padding: 12px;
+  }
+
+  #quotePopup h5 {
+    font-size: 16px;
+  }
+
+  #quotePopup input {
+    font-size: 13px;
+    padding: 6px;
+  }
+
+  #quotePopup button[type="submit"] {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+/* Ultra-small devices (≤360px) */
+@media (max-width: 360px) {
+  .card-container {
+    grid-template-columns: 1fr;  /* 1 card per row */
+  }
+
+  .card {
+    max-width: 90%;
+  }
+
+  .info-container {
+    padding: 10px;
+  }
+
+  #getQuoteBtn, #openQuoteBtn {
+    font-size: 13px;
+    padding: 8px 14px;
+  }
+  
+}
+@media (max-width: 576px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row */
+    gap: 15px;
+  }
+
+  .card {
+    width: 100%;       /* 👈 full width of grid cell */
+    max-width: none;   /* 👈 restrict cheyyakunda */
+  }
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="forex-cards-container-big">            
+    <h2>Our Insurance Plans</h2>
+
+    <div class="card-container">
+      <div class="card" 
+          data-heading="Life Insurance"
+          data-info="At Buzz Finserve, we make life insurance simple and stress-free. Life may be unpredictable, but with our range of plans, your family’s future is always secure. From high-coverage, low-cost term plans to life cover with investment returns, joint plans for couples, and child education protection, we have solutions for every stage of life. Enjoy financial security, tax benefits under Sections 80C and 10(10D), and a fully paperless, hassle-free process – all under one roof."
+          data-image="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1754981539/Retirement_Insurance__Securing_Your_Future_zyryz5.jpg">
+        <i class="fas fa-heart"></i> Life Insurance
+      </div>
+
+      <div class="card" 
+          data-heading="Health Insurance"
+          data-info="We believe your health is your most valuable asset. That’s why we offer comprehensive health insurance plans to safeguard you and your family from rising medical costs. From expert guidance and customized coverage options to a wide cashless hospital network, tax benefits under Section 80D, and quick claim support – we make healthcare protection simple, affordable, and stress-free."
+          data-image="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1754985738/25_ideas_de_marketing_para_m%C3%A9dicos_para_crecer_tu_consultorio_itqqom.jpg">
+        <i class="fas fa-notes-medical"></i> Health Insurance
+      </div>
+
+      <div class="card" 
+          data-heading="General Insurance"
+          data-info="At Buzz Finserve, we make protection simple and affordable. From motor, home, and travel to health and commercial insurance, our plans cover every part of your life. We work with trusted insurers, offer 100% transparent advice, and provide 24x7 support – ensuring you get maximum benefits with minimum hassle."
+          data-image="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1754981887/Insurance_Policy_Services_in_the_Hand___Stock_Photo_-_Image_of_father_businessman__90208288_u83nl2.jpg">
+        <i class="fas fa-shield-alt"></i> General Insurance
+      </div>
+
+      <div class="card"
+          data-heading="Travel Insurance" 
+          data-info="Wherever you go, go with confidence. At Buzz Finserve, our customized travel insurance plans protect you worldwide – from medical emergencies and lost documents to flight delays and cancellations. Enjoy 24x7 global assistance, cashless hospitalization abroad, affordable premiums, and quick, hassle-free claims – so you can focus on making memories."
+          data-image="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1754982073/Travel_Insurance_iyfdxx.jpg">
+        <i class="fas fa-plane-departure"></i> Travel Insurance
+      </div>
+
+      <div class="card" 
+          data-heading="Vehicle Insurance" 
+          data-info="Your vehicle is more than just transport – it’s part of your everyday life. At Buzz Finserve, we provide fast, affordable insurance with instant policy issuance, low premiums, and cashless repairs at 1000+ garages nationwide. From comprehensive cover and zero depreciation options to quick, hassle-free claims, we keep your ride protected every mile of the way."
+          data-image="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1754986526/Manos_de_agente_protegen_casa_y_auto___Vector_Premium_il9wwy.jpg">
+        <i class="fas fa-car"></i> Vehicle Insurance
+      </div>
+
+      <div class="card"
+           data-heading="Home Insurance"  
+          data-info="Your home is more than walls – it’s your safe haven. At Buzz Finserve, we offer smart, affordable home insurance that protects both your house and everything inside it. From fire, theft, and natural disasters to damage or loss of valuables, our plans cover it all. Whether you own or rent, enjoy tailored protection, fast claims, and complete peace of mind."
+          data-image="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1754986653/Comprar_una_casa_venta_de_bienes_ra%C3%ADces_transacci%C3%B3n_de_bienes_ra%C3%ADces___Vector_Premium_tynqbq.jpg">
+        <i class="fas fa-home"></i> Home Insurance
+      </div>
+    </div>
+
+    <div id="info-container" class="info-container">
+      <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1754987740/Insurance_Services_by_Talex___Creative_Market_tl9dmh.jpg" alt="Insurance Image">
+      <div class="info-text">
+        <p>With Buzz Groups, your dreams, health, home, and future are always in safe hands. From life and health to travel, home, and vehicle insurance, we provide complete protection for every aspect of your life – backed by trusted partners, expert guidance, and 24x7 support. Wherever life takes you, we’ve got you covered.</p>
+      </div>
+    </div>
+
+    <script>
+      const cards = document.querySelectorAll('.card');
+      const infoContainer = document.getElementById('info-container');
+
+      cards.forEach(card => {
+        card.addEventListener('click', () => {
+          const heading = card.getAttribute('data-heading');
+          const infoText = card.getAttribute('data-info');
+          const imageSrc = card.getAttribute('data-image');
+          infoContainer.innerHTML = `
+            <img src="${imageSrc}" alt="Insurance Image">
+            <div class="info-text"> <h3>${heading}</h3><p>${infoText}</p></div>
+          `;
+        });
+      });
+    </script>
+
+</div>
+
+
+
+<!-- footer -->
+<div>
+   
+    <div class="footer shadow">
+        <div class="container">
+          <!-- Logo Column -->
+          <div class="footer-col logo-col">
+            <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1752835706/0654a2c4ddb72401ea6f457be00c5c6c_wz3rhc.png" alt="Buzz Groups Logo" class="logo">
+          </div>
+
+          <!-- Contact Details -->
+          <div class="footer-col">
+            <h4>Address</h4>
+            <div class="details">
+              <p>#6-3-1111/B</p>
+              <p>Shop No 5 & 6, Babukhan Mall,<br>Greenlands Road, Somajiguda, Hyderabad</p>
+              <p>Telangana - 500082</p>
+              <p>info@buzzgroups.in</p>
+              <p>(+91) 888 600 8060</p>
+            </div>
+          </div>
+
+          <!-- Services -->
+          <div class="footer-col">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="#">Buzz Holidayz</a></li>
+              <li><a href="#">Buzz Forex</a></li>
+              <li><a href="#">Buzz Finserve</a></li>
+              <li><a href="#">Streets Corner</a></li>
+              <li><a href="#">Buzz Digital</a></li>
+            </ul>
+          </div>
+
+          <!-- Information -->
+          <div class="footer-col">
+            <h4>Information</h4>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Our Team</a></li>
+              <li><a href="#">Franchise Enquiry</a></li>
+            </ul>
+          </div>
+        </div>
+
+    
+        <!-- Social Media Bar -->
+            <div class="social-bar">
+                <a href="https://www.facebook.com/reel/630032483128401/?app=fbl" class="facebook"><i class="fab fa-facebook-f"></i><span>Facebook</span></a>
+                <!-- <a href="#" class="twitter"><i class="fab fa-twitter"></i><span>Twitter</span></a> -->
+                <a href="https://www.instagram.com/reel/DEXRCApPjXC/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA==" class="instagram"><i class="fab fa-instagram"></i><span>Instagram</span></a>
+                <a href="https://www.linkedin.com/in/leads-buzz-8aab81309" class="linkedin"><i class="fab fa-linkedin-in"></i><span>LinkedIn</span></a>
+                <a href="https://www.youtube.com/@BuzzGroups-STK" class="youtube"><i class="fab fa-youtube"></i><span>YouTube</span></a>
+            </div>
+
+          <div>       
+          <p class="company-name">STK UNITY UMBRELLA LTD. All Rights Reserved</p>
+          </div>
+    </div>
+
+</div>
+
+
+
+
+
+<div>
+    <button id="openQuoteBtn" class="btn btn-primary" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">Get Quotation</button>
+
+    <div id="quotePopup" style="
+      display: none;
+      position: fixed;
+      bottom: 70px;
+      right: 20px;
+      width: 300px;
+      background: white;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      border-radius: 8px;
+      padding: 15px;
+      z-index: 1100;
+    ">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+        <h5 style="margin:0;">Get Quotation</h5>
+        <button id="closeQuoteBtn" style="background:none; border:none; font-size: 20px; cursor:pointer;">&times;</button>
+      </div>
+      <form>
+        <input type="text" class="form-control mb-2" placeholder="Name" required />
+        <input type="email" class="form-control mb-2" placeholder="Email" required />
+        <input type="tel" class="form-control mb-2" placeholder="Phone" required />
+          <input type="insurance" class="form-control mb-2" placeholder="Insurance Type" required />
+        <button type="submit" class="btn btn-success w-100">Submit</button>
+      </form>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const openBtn = document.getElementById('openQuoteBtn');
+      const popup = document.getElementById('quotePopup');
+      const closeBtn = document.getElementById('closeQuoteBtn');
+
+      openBtn.addEventListener('click', () => {
+        popup.style.display = 'block';
+      });
+
+      closeBtn.addEventListener('click', () => {
+        popup.style.display = 'none';
+      });
+
+      window.addEventListener('click', (e) => {
+        if (e.target === popup) {
+          popup.style.display = 'none';
+        }
+      });
+    });
+    </script>
+</div>
+
+
+
+</body>
+</html>

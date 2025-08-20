@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #3a8de0, #8e54e9);
+      background-attachment: fixed;
+    }
+
+    .contact-section {
+      padding: 60px 20px;
+      text-align: center;
+      color: #fff;
+    }
+
+    .contact-container {
+      max-width: 600px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 40px 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(10px);
+    }
+
+    .contact-section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    .contact-subtext {
+      margin-bottom: 30px;
+      font-size: 1rem;
+      color: #f0f0f0;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      box-sizing: border-box;
+      outline: none;
+      background: rgba(255, 255, 255, 0.8);
+      color: #333;
+    }
+
+    .contact-form textarea {
+      height: 120px;
+      resize: vertical;
+    }
+
+    .contact-form button {
+      background: #ffffff;
+      color: #4a4a4a;
+      border: none;
+      padding: 14px 24px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: bold;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .contact-form button:hover {
+      background: #222;
+      color: #fff;
+    }
+
+    @media (max-width: 600px) {
+      .contact-container {
+        padding: 30px 20px;
+      }
+
+      .contact-section h2 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="contact-section">
+    <div class="contact-container">
+      <h2>We’d Love to Hear from You</h2>
+      <p class="contact-subtext">Have questions, feedback, or need assistance? Fill out the form below and we’ll get back to you shortly.</p>
+
+      <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you! We have received your message.')">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <input type="tel" placeholder="Your Contact Number" required pattern="[0-9]{10}" title="Enter 10-digit mobile number">
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+</body>
+</html>

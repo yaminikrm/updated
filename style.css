@@ -1,0 +1,2379 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+/*/////////////////////////////////////
+WHATSAP ICON CSS
+///////////////////////////////////////*/
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+/* NAV BAR -----------r */
+
+.navbar-custom {
+    /* background-color: #F1F1F1; */
+  background: linear-gradient(to right, #3b2415, #a9742b 70%, #fff 95%);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  margin: 10px auto 40px auto;  /* Less top margin, center horizontally */
+  border-radius: 15px;
+  width: 95%;
+  max-width: 1400px;
+  margin-bottom:200px;
+}
+
+
+/* NAV LINKS WITH ICONS */
+.navbar-nav .nav-link {
+  color:white !important;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  padding: 8px 10px;
+}
+.navbar-nav .nav-link i {
+    color: white;
+    font-size: 21px;
+}
+
+.navbar-nav .nav-link i {
+  font-size: 16px;
+}
+
+/* NAV LINK HOVER EFFECT */
+.navbar-nav .nav-link:hover {
+  color: #000 !important;
+}
+
+/* ICONS OUTSIDE NAV (e.g. Login, Contact) */
+.login-icon,
+.contact-icon {
+  color: white; 
+  font-size: 1.6rem;
+  margin-left: 6px;
+}
+
+.login-icon:hover,
+.contact-icon:hover {
+  color: black;
+}
+
+/* LOGO STYLING */
+.navbar-logo {
+  height: 35px;
+  max-width: 150px;
+  padding-left: 10px;
+}
+
+/* DROPDOWN MENU STYLING */
+.dropdown-menu {
+  background-color: #fff;
+  border-radius: 8px;
+  min-width: 180px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-item {
+  color: #333;
+  font-weight: 500;
+}
+
+.dropdown-item:hover {
+  background-color: #f1f1f1;
+  color: #000;
+}
+
+/* NAV ITEM SPACING */
+.nav-item {
+  padding-left: 3px;
+}
+
+/* RESPONSIVE TWEAKS FOR SMALL SCREENS */
+@media (max-width: 768px) {
+  .navbar-logo {
+    margin-top: 10px;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 13px;
+    gap: 3px;
+    padding: 6px 8px;
+  }
+
+  .navbar-nav .nav-link i {
+    font-size: 14px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px; /* Height of your navbar + a little buffer */
+}
+
+
+
+/* NAV BAR */
+.navbar-custom {
+  background: linear-gradient(to right, #3b2415, #a9742b 70%, #fff 95%);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  margin: 10px auto 40px auto;
+  border-radius: 15px;
+  width: 95%;
+  max-width: 1400px;
+  margin-bottom: 60px; /* 👈 200px → 60px */
+}
+
+.nav-bar-white-container {
+  min-height: 80px;  /* 👈 fixed 20vh ki baduluga minimum height */
+  padding: 10px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  /* .navbar-custom {
+    margin-bottom: 30px; /* 👈 smaller gap for mobile */
+  } */
+  .nav-bar-white-container {
+    min-height: auto; /* 👈 mobile lo auto adjust */
+    padding: 8px 0;
+  }
+    .navbar-custom {
+    margin-bottom: 20px; /* 👈 smaller gap for mobile */
+    min-height: 50px;  /* default 70px ante thaggutundi */
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .navbar-toggler {
+    padding: 0.2rem 0.5rem;  /* button spacing reduce cheyyadam */
+  }
+
+  .navbar-brand img {
+    max-height: 35px; /* logo ki height limit cheyyadam */
+  }
+}
+
+
+
+
+
+
+
+
+
+/*/////////////////////////////
+ KNOW US SECTION CLEAN RESPONSIVE
+//////////////////////////////*/
+
+.know-us-section {
+    padding: 100px 40px;   Top & bottom breathing space
+    background-size: cover;
+    text-align: center;
+    height:100vh;
+}
+
+.knowus-heading {
+    font-family: system-ui, sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+    margin-bottom: 20px;   /* gap below heading */
+}
+
+.knowus-paragraph1 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 900px;       /* keeps text neat */
+    margin: 0 auto 40px auto;
+    color: #333;
+    text-align: center;
+}
+
+/* Stats Section */
+#knowUsSection .row {
+    margin-bottom: 40px;
+    justify-content: center;
+    text-align: center;
+}
+
+.highlight {
+    font-family: Georgia, serif;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 15px 0;
+}
+
+/* Button */
+.more-know-button {
+    font-family: Roboto, sans-serif;
+    border: 2px solid black;
+    font-weight: bold;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-size: 15px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.more-know-button:hover {
+    background-color: white;
+    color: black;
+}
+
+/*--------------------------------
+ Responsive Adjustments
+--------------------------------*/
+
+/* Large Screens (Desktops) */
+@media (min-width:1025px) {
+    .know-us-section {
+    padding: 100px 40px;   Top & bottom breathing space
+    background-size: cover;
+    text-align: center;
+    height:100vh;
+}
+    .knowus-heading {
+        font-size: 42px;
+    }
+    .knowus-paragraph1 {
+        font-size: 18px;
+    }
+    .highlight {
+        font-size: 18px;
+    }
+}
+
+/* Medium Screens (Tablets) */
+@media (min-width:768px) and (max-width:1024px) {
+    .know-us-section {
+    padding: 100px 40px;   Top & bottom breathing space
+    background-size: cover;
+    text-align: center;
+    height:100vh;
+}
+    .know-us-section {
+        padding: 70px 30px;
+    }
+    .knowus-heading {
+        font-size: 34px;
+    }
+    .knowus-paragraph1 {
+        font-size: 16px;
+    }
+    .highlight {
+        font-size: 16px;
+    }
+}
+
+/* Small Screens (Mobiles) */
+@media (max-width:767px) {
+    .know-us-section {
+        padding: 60px 15px;
+    }
+    .knowus-heading {
+        font-size: 26px;
+    }
+    .knowus-paragraph1 {
+        font-size: 14px;
+        line-height: 1.5;
+        padding: 0 5px;
+    }
+    .highlight {
+        font-size: 14px;
+        margin: 8px 0;
+    }
+    .more-know-button {
+        font-size: 14px;
+        margin-top: 25px;
+        padding: 10px 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*///////////////////////
+WHY BUZZ GROUPS-----r
+////////////////////////*/
+
+.why-buzz-groups-section-heaidng {
+    font-family: system-ui;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+@media(min-width:768px) {
+    .why-buzz-groups-section-heaidng {
+        font-family: system-ui;
+        font-weight: bold;
+        text-align: center;
+        font-size: 32px;
+        color: black;
+        padding-bottom: 18px;
+        padding-top: 30px;
+
+    }
+}
+
+.small-container {
+    background-color: #ffffff;
+    padding-bottom: 60px;
+}
+
+.why-choose-content {
+    font-family: Roboto;
+    font-size: 18px;
+    color: white;
+    padding-left: 35px;
+}
+
+@media (max-width:768px) {
+    .why-choose-content {
+        font-family: Roboto;
+        font-size: 12px;
+        padding-left: 18px;
+    }
+}
+
+.small-cards {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 15;
+    margin-bottom: 10px;
+}
+
+
+
+.card-heading::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: black;
+  transition: width 0.8s ease-in-out;
+}
+
+.card-heading.underline-visible::after {
+  width: 100%;
+}
+
+
+
+.card-explination {
+    font-family: Roboto;
+    font-size: 15px;
+}
+
+@media (max-width:768px) {
+    .card-explination {
+        font-family: Roboto;
+        font-size: 12px;
+
+    }
+}
+
+
+
+.service-logo {
+  height: 75px;
+  width: 70px;
+  margin-bottom: 10px; /* Already exists */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-heading {
+    display: inline-block; /* ✅ Only as wide as the text */
+  position: relative;
+  /* display: block; ✅ So it appears below the image */
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  margin-top: 10px;   /* ✅ This gives space from image */
+  margin-bottom: 10px; /* Optional, space before explanation */
+}
+@media (max-width: 768px) {
+    .why-buzz-groups-section-heaidng {
+        font-size: 18px;
+        padding-top: 25px;   /* ✅ Added top spacing only for small devices */
+        padding-bottom: 15px;
+    }
+
+    .small-container {
+        padding-top: 10px;   /* ✅ ensure the section has some breathing room */
+        padding-bottom: 40px;
+    }
+    #homeSection,
+#ourServiceSection {
+    margin: 0;
+    padding: 0;
+}
+
+#homeSection {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+#ourServiceSection {
+    margin-top: 0 !important;
+    /* padding-top: 20px;  heading ki konchem breathing space matrame */
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*//////////////////////////
+CAREER CSS----r
+/////////////////////////*/
+
+.internship-big-container {
+    background-color: #ffffff;
+    /* margin: 25px; */
+    height:100vh;
+    margin-top:50px;
+    margin-bottom: 50px;
+}
+
+
+.career-img {
+    height: 150px;
+}
+
+@media(min-width:768px) {
+    .career-img {
+        height: 59vh;
+    }
+}
+
+.career-heading {
+    font-family: system-ui;
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+
+.career-paragraph {
+    font-family: Roboto;
+    font-size: 12px;
+}
+
+
+.eligibilty-heading {
+    font-family: Roboto;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.eligibility-paragraph {
+    font-family: Roboto;
+
+}
+
+@media(min-width:768px) {
+
+    .career-heading {
+        font-family: system-ui;
+        font-weight: bold;
+        font-size: 35px;
+        margin-top: 100px;
+    }
+
+    .career-paragraph {
+        font-family: Roboto;
+        font-size: 14px;
+       
+    }
+}
+
+.career-small-container {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 0px;
+    padding-top: 0px;
+    padding-bottom: 60px;
+}
+
+.career-small-container-heading {
+    font-family: system-ui;
+    /* text-decoration: underline; */
+    font-size: 17px;
+    font-weight: bold;
+
+}
+
+.career-small-container-paragraph {
+    font-family: Roboto;
+    font-size: 12px;
+}
+
+@media(min-width:768px) {
+    .career-small-container-heading {
+        font-family: system-ui;
+        /* text-decoration: underline; */
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    .career-small-container-paragraph {
+        font-family: Roboto;
+        font-size: 13px;
+        text-align: center;
+        
+    }
+}
+
+.intern-program-heading {
+    text-decoration: underline;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.intern-program-paragraph {
+    font-family: Roboto;
+    font-size: 13px;
+}
+
+.intern-button {
+  background: radial-gradient(circle at bottom left, #f7c35f, #a66f1d); 
+  border-radius: 6px;     /* Smooth rounded corners */
+  color:white;            /* Text color - black */
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  padding: 6px 12px;      /* Balanced padding */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1); Soft shadow */
+  
+}
+
+/* Center image and text on small devices */
+@media(max-width: 767px) {
+    .career-img {
+        display: block;
+        margin: 0 auto;  /* centers image horizontally */
+    }
+
+    .career-heading,
+    .career-paragraph {
+        text-align: center; /* centers text */
+    }
+}
+
+
+@media(max-width: 767px) {
+    .career-small-container-heading {
+        margin-top: 20px;  /* small devices lo heading ki paina gap */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* =============================
+ Partner Program Section CSS  -------r
+ ============================= */
+
+.partner-program-container {
+    background-color: #ffffff;
+    background-position: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+@media (min-width:768px) {
+.partner-program-content-container{
+    margin-top: 170px;
+}
+}
+/* Headings & Paragraphs */
+.franchise-enquiry-heaidng {
+    font-family: system-ui;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #000000;
+    text-align: center;
+}
+
+.franchise-enquiry-paragraph,
+.franchise-enquiry-paragraph2 {
+    font-family: Roboto, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1.6;
+    color: #333333;
+    text-align: center;
+}
+
+hr {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* Image */
+.opportunity-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+/* ========================= */
+/*  Buzz Mithra Section CSS  */
+/* ========================= */
+
+.buzz-mitra-container {
+    background-color: #ffffff;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Images */
+.buzz-mitra-img1,
+.buzz-mitra-img2 {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Text styles */
+.Buzz-Mithra-agent-heading {
+    font-family: system-ui;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.Buzz-Mithra-agent-paragraph {
+    font-family: sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    color: #444444;
+}
+
+/* Button */
+.read-more-button {
+    background-color: black;
+    font-family: 'Roboto', sans-serif;
+    border: none;
+    border-radius: 20px;
+    font-size: 13px;
+    color: #ffffff;
+    padding: 6px 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.read-more-button:hover {
+    transform: scale(1.05);
+}
+
+/* ========================== */
+/*  Responsive Media Queries  */
+/* ========================== */
+
+/* Small Devices (Mobiles <576px) */
+@media (max-width: 575.98px) {
+    .franchise-enquiry-heaidng {
+        font-size: 18px;
+    }
+    .franchise-enquiry-paragraph,
+    .franchise-enquiry-paragraph2 {
+        font-size: 12px;
+    }
+    .Buzz-Mithra-agent-heading {
+        font-size: 14px;
+    }
+    .Buzz-Mithra-agent-paragraph {
+        font-size: 12px;
+    }
+    .read-more-button {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+}
+
+/* Medium Devices (Tablets 576px–768px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .franchise-enquiry-heaidng {
+        font-size: 22px;
+    }
+    .franchise-enquiry-paragraph,
+    .franchise-enquiry-paragraph2 {
+        font-size: 14px;
+    }
+    .Buzz-Mithra-agent-heading {
+        font-size: 16px;
+    }
+    .Buzz-Mithra-agent-paragraph {
+        font-size: 13px;
+    }
+    .opportunity-img,
+    .buzz-mitra-img1,
+    .buzz-mitra-img2 {
+        height: auto;
+    }
+}
+
+/* Large Devices (Laptops ≥768px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .franchise-enquiry-heaidng {
+        font-size: 26px;
+        padding-top: 40px;
+    }
+    .franchise-enquiry-paragraph {
+        font-size: 15px;
+        padding-top: 20px;
+    }
+    .franchise-enquiry-paragraph2 {
+        font-size: 15px;
+        margin-top: -15px;
+    }
+    .opportunity-img,
+    .buzz-mitra-img1,
+    .buzz-mitra-img2 {
+        height: 45vh;
+        object-fit: cover;
+    }
+}
+
+/* Extra Large Devices (Desktops ≥992px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .franchise-enquiry-heaidng {
+        font-size: 30px;
+    }
+    .franchise-enquiry-paragraph,
+    .franchise-enquiry-paragraph2 {
+        font-size: 16px;
+    }
+    .opportunity-img,
+    .buzz-mitra-img1,
+    .buzz-mitra-img2 {
+        height: 50vh;
+        object-fit: cover;
+    }
+}
+
+/* XXL Screens (≥1200px) */
+@media (min-width: 1200px) {
+    .franchise-enquiry-heaidng {
+        font-size: 34px;
+    }
+    .Buzz-Mithra-agent-heading {
+        font-size: 22px;
+    }
+    .Buzz-Mithra-agent-paragraph {
+        font-size: 17px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/************************* INNER SECTIONS *************************************/
+
+/*/////////////////////
+KNOW US INNER SECTION CSS
+///////////////////////*/
+
+.about-us-background-container {
+    background-image: url("https://res.cloudinary.com/dlcuxbo8m/image/upload/v1744370551/Download_Abstract_background_dark_and_black_overlaps_002_for_free_tg1tok.jpg");
+    background-size: cover;
+    padding: 15px;
+    padding-bottom: 30px;
+    padding-top: 20px;
+}
+
+.aboutus-heaidng {
+    font-family: Roboto;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.aboutus-img-icon {
+    height: 150px;
+    border-radius: 25px;
+}
+
+.know-us-paragraph {
+    font-family: Roboto;
+    color: #ffffff;
+}
+
+.acheivement-img-icon {
+    height: 490px;
+    border-top-left-radius: 25px;
+}
+
+.member-of-femta-heaidng {
+    font-family: Roboto;
+    color: #ffffff;
+    font-size: 25px;
+    text-decoration: underline;
+}
+
+.femta-paragraph {
+    font-family: Roboto;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.back-button {
+    border-style: none;
+    background-color: white;
+    font-family: Roboto;
+    font-weight: bold;
+    border-radius: 15px;
+    height: 40px;
+    width: 70px;
+    margin-top: 30px;
+}
+
+@media(max-width:768px) {
+    .aboutus-heaidng {
+        font-family: Roboto;
+        font-weight: bold;
+        color: #ffffff;
+        font-size: 18px;
+    }
+
+    .aboutus-img-icon {
+        height: 150px;
+        border-radius: 25px;
+    }
+
+    .know-us-paragraph {
+        font-family: Roboto;
+        color: #ffffff;
+        font-size: 10px;
+    }
+
+    .acheivement-img-icon {
+        height: 300px;
+        border-top-left-radius: 25px;
+    }
+
+    .member-of-femta-heaidng {
+        font-family: Roboto;
+        color: #ffffff;
+        font-size: 10px;
+        text-decoration: underline;
+    }
+
+    .femta-paragraph {
+        font-family: Roboto;
+        color: #ffffff;
+        font-size: 10px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/*/////////////////////
+ BUZZ HOLIDAS INNER CSS 
+//////////////////////*/
+
+.buzz-holidays-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #F1F1F1;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 15px;
+    margin: 10px auto;
+    max-width: 800px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.buzz-holidays-container:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    opacity: 0.95;
+}
+
+.holidays-images {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+
+.holiday-text-content {
+    flex: 1;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .buzz-holidays-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .holidays-images {
+        width: 100%;
+        height: 200px;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .holiday-text-content {
+        width: 100%;
+    }
+}
+
+
+/*holidays section*/
+.buzz-holidays-heading {
+    color: white;
+    font-family: Serif;
+    font-style: italic;
+    font-weight: bold;
+    padding-top: 150px;
+}
+
+.bh-nfo-container {
+    background-image: url("https://res.cloudinary.com/dlcuxbo8m/image/upload/v1750934513/Free_Wallpaper_Tourist_Attractions_Background_Images_Cartoon_Around_The_World_Background_Picture_Photo_Background_PNG_and_Vectors_ei1anu.jpg");
+    background-size: cover;
+    text-align: center;
+    
+}
+
+.bh-info-image {
+    height: 30vh;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 30px;
+}
+.what-buzzholidayz-do-heading{
+    color:black;
+}
+.what-buzzholidayz-do-paragraph{
+ color:black;
+}
+
+@media (min-width:768px) {
+    
+    .bh-nfo-container {
+        background-image: url("https://res.cloudinary.com/dlcuxbo8m/image/upload/v1751010635/Flat_design_travel_background___Free_Vector-Picsart-AiImageEnhancer_ernbsf.png");
+        background-size: cover;
+        text-align: center;
+        height: 100vh;
+        padding: 20px;
+    }
+
+    .bh-info-image {
+        height: 65vh;
+        width:700px;
+        padding-top: 10px;
+        border-top-left-radius: 120px;
+        border-bottom-right-radius: 140px;
+    }
+
+}
+
+
+.big-international-container {
+    background-image: url("https://res.cloudinary.com/dlcuxbo8m/image/upload/a_90/v1746526981/%D0%9E%D0%B1%D0%BE%D0%B8_iOS_iPhone_11_12_13_14_15_16_Pro_Max_buv0g0.jpg");
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+
+.international-destination-heading {
+    font-family: Lucida Handwriting;
+    font-size: 35px;
+    color: white;
+    text-align: center;
+}
+
+.domestic-destination-heading{
+       font-family: Lucida Handwriting;
+        font-size: 35px;
+        color: white;
+        text-align: center;
+    }
+
+.buzz-holidays-trips-container {
+  background-color:white;
+    border-radius: 10px;
+}
+
+.buzz-holidays-trips-container {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.buzz-holidays-trips-container:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.buzz-holidays-trips-container:hover {
+    transform: scale(1.1) rotate(5deg);
+    opacity: 0.9;
+}
+
+.holidays-images-icon {
+    height: 190px;
+}
+
+.days-small-conatiner {
+    background-color: #74886b;
+    border-radius: 5px;
+    width: 90px;
+}
+
+.days-paragraph {
+    font-family: Roboto;
+    text-align: center;
+    color: white;
+    padding: 2px;
+    font-size: 10px;
+     background: radial-gradient(circle at bottom left, #f7c35f, #a66f1d); 
+}
+
+.description-holidays {
+    font-family: sans-serif;
+    font-size: 9px;
+}
+
+.destination-heading {
+    font-family: system-ui;
+    font-size: 10px;
+    font-weight:bold;
+}
+
+@media(min-width:768px) {
+    .holidays-images-icon{
+        height: 195px;
+    }
+
+    .description-holidays {
+        font-family: sans-serif;
+        font-size: 12px;
+    }
+
+    .destination-heading {
+        font-family: system-ui;
+        font-size: 15px;
+        font-weight:bold;
+    }
+
+    .international-destination-heading {
+        font-family: Lucida Handwriting;
+        font-size: 35px;
+        color: white;
+        text-align: center;
+    }
+    .domestic-destination-heading{
+       font-family: Lucida Handwriting;
+        font-size: 35px;
+        text-align: center;
+        color:white;
+    }
+}
+
+.big-domestic-container {
+    background-image: url("https://res.cloudinary.com/dlcuxbo8m/image/upload/v1751007128/Above_the_Clouds_y8okct.png");
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*////////////////////////
+FOREX INNER SECTION CSS 
+////////////////////////*/
+
+.forex-card-container {
+    background-image: url("https://res.cloudinary.com/dlcuxbo8m/image/upload/v1750923728/Money_transfer__Global_Currency._Stock_Exchange_fu31b8.jpg");
+    background-size: cover;
+    padding-bottom: 15px;
+}
+
+.forex-heading {
+    font-family: Georgia, serif;
+    color: white;
+    font-size: 17px;
+    padding-top: 40px;
+    width: 160px;
+    padding-left: 20px;
+}
+
+@media(min-width:768px) {
+    .forex-card-container {
+        background-image: url("https://res.cloudinary.com/dlcuxbo8m/image/upload/v1750923728/Money_transfer__Global_Currency._Stock_Exchange_fu31b8.jpg");
+        background-size: cover;
+        height: 80vh;
+    }
+
+    .forex-heading {
+        font-family: Georgia, serif;
+        color: white;
+        font-size: 40px;
+        padding-top: 160px;
+        width: 450px;
+        padding-left: 30px;
+        text-align: end;
+    }
+
+}
+
+.second-background-container {
+    background-image: url("https://res.cloudinary.com/dlcuxbo8m/image/upload/v1747037464/Download_premium_vector_of_Futuristic_global_network_technology_vector_by_Kappy_about_background_blue_background_neon_circle_and_technology_background_1055195_ynmlcb.jpg");
+    background-size: cover;
+    padding: 15px;
+}
+
+.buzz-forex-second-bg-container-img {
+    height: 35vh;
+    width: 250px;
+}
+
+@media(min-width:768px) {
+    .buzz-forex-second-bg-container-img {
+        height: 58vh;
+        width: 450px;
+        margin-left: 37px;
+    }
+}
+
+.list-style-type {
+     font-family: 'Open Sans', sans-serif;
+}
+
+.travel-smart-buzz-heading {
+   font-family: 'Bree Serif', serif;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+.travel-smart-img-icon {
+    width: 100%;
+    height: auto;
+}
+
+.travel-smart-img-icon2 {
+    width: 100%;
+    height: auto;
+}
+
+@media(min-width:768px) {
+    .travel-smart-img-icon {
+        height: 30vh;
+    }
+
+    .travel-smart-img-icon2 {
+        height: 33vh;
+    }
+}
+
+.quote-container {
+    background-image: url("https://res.cloudinary.com/dlcuxbo8m/image/upload/v1745132093/Business_background_with_various_money_symbol_Clip_Art_32144423_iweut4.jpg");
+    background-size: cover;
+    height: 40vh;
+    margin-top: 20px;
+}
+
+.quote-heading {
+    font-family: 'Lobster', cursive;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding: 60px;
+}
+
+@media (min-width:768px) {
+    .quote-container {
+        background-image: url("https://res.cloudinary.com/dlcuxbo8m/image/upload/v1750926143/Untitled_design_42_nujymp.png");
+        background-size: cover;
+        height: 60vh;
+        margin-top: 20px;
+    }
+
+    .quote-heading {
+        font-family: 'Lobster', cursive;
+        font-weight: bold;
+        color: white;
+        font-size: 40px;
+        text-align: center;
+        padding: 60px;
+        padding-top: 230px;
+
+    }
+} 
+
+
+
+/*////////////////////////
+FINSERVE INNER SECTION CSS
+////////////////////////*/
+
+.finserve-container {
+    background-image: url("https://res.cloudinary.com/dlcuxbo8m/image/upload/v1745142604/Premium_Photo___Pen_lying_with_dollars_on_paper_with_printed_word_insurance_twrkxy.jpg");
+    background-size: cover;
+    background-position: center;
+    height: auto;
+    padding: 200px 20px;
+}
+
+.second-finserve-container {
+    background-image: url("https://res.cloudinary.com/dlcuxbo8m/image/upload/v1745148952/Premium_Vector___Simple_blue_color_background_vector_for_business_tncl0o.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 20px 15px;
+}
+
+/* Headings & Paragraphs */
+.buzz-finserve-heading {
+    font-family: system-ui;
+    font-weight: bold;
+    font-size: 28px;
+    text-align: center;
+    color: #000;
+    padding: 20px 10px 10px;
+    background: radial-gradient(circle at bottom left, #f7c35f, #a66f1d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.buzz-finserve-paragraph {
+    font-family: "Gill Sans", sans-serif;
+    font-size: 14px;
+    text-align: center;
+    color: #000;
+}
+
+/* Offering Section */
+.offering-heading {
+    font-family: system-ui;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: underline;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.services-list {
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    padding-left: 15px;
+}
+
+/* Insurance Content Block */
+.all-insurances-container {
+    background-image: url("https://res.cloudinary.com/dlcuxbo8m/image/upload/v1745150109/download_28_vz5ynq.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 20px 10px;
+}
+
+.life-insurance-heading {
+    font-family: system-ui;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: underline;
+    text-align: center;
+    margin-top: 15px;
+     background: radial-gradient(circle at bottom left, #f7c35f, #a66f1d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+
+}
+
+.life-insurance-paragraph {
+    font-family: "Gill Sans", sans-serif;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Image Styling */
+.service-img {
+    height: auto;
+    width:100%;
+    border-radius: 30px;
+    margin-top: 50px;
+
+}
+
+/* Responsive Overrides for Larger Devices */
+@media(min-width: 768px) {
+    .buzz-finserve-heading {
+        font-size: 35px;
+    }
+
+    .buzz-finserve-paragraph {
+        font-size: 18px;
+    }
+
+    .offering-heading {
+        font-size: 18px;
+        text-align: left;
+        padding-left: 30px;
+    }
+
+    .services-list {
+        font-size: 15px;
+        padding-left: 50px;
+    }
+
+    .life-insurance-heading {
+        text-align: left;
+        padding-left: 20px;
+        font-size: 18px;
+    }
+
+    .life-insurance-paragraph {
+        text-align: left;
+        padding-left: 20px;
+        font-size: 15px;
+    }
+
+     .service-img {
+        height: 300px;
+        width:530px;
+        border-radius: 30px;
+        margin-top: 50px;
+    }
+  
+}
+
+
+
+
+
+/*////////////////////////////////
+ ONE MNTH INTERNSHIP APPLY SECTION
+ ////////////////////////////////*/
+
+.apply-bg-container {
+    background-image: url("https://res.cloudinary.com/dlcuxbo8m/image/upload/v1744629496/Blue_Minimalist_Texture_Background_Wallpaper_Image_For_Free_Download_-_Pngtree_mlapqi.jpg");
+    background-size: cover;
+    padding: 50px;
+
+}
+
+.small-bg-apply-container {
+    background-color: white;
+    padding: 20px;
+}
+
+.form-control-label {
+    font-family: Roboto;
+    font-weight: bold;
+}
+
+.submit-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.apply-now-button {
+    font-family: Roboto;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.gender-heading {
+    font-family: Roboto;
+    font-size: 15px;
+}
+
+
+
+
+
+/*/////////////////////////////////////
+BUZZ MITRA READ1 SECTION CSS
+////////////////////////////////////*/
+
+.apply-bg-container {
+    background-image: url("https://res.cloudinary.com/dlcuxbo8m/image/upload/v1744629496/Blue_Minimalist_Texture_Background_Wallpaper_Image_For_Free_Download_-_Pngtree_mlapqi.jpg");
+    background-size: cover;
+    padding: 50px;
+
+}
+
+.small-bg-apply-container {
+    background-color: white;
+    padding: 20px;
+}
+
+.form-control-label {
+    font-family: Roboto;
+    font-weight: bold;
+}
+
+.submit-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.apply-now-button {
+    font-family: Roboto;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.gender-heading {
+    font-family: Roboto;
+    font-size: 15px;
+}
+
+
+
+
+
+/*////////////////////////////
+BUZZ MITRA READ2 SECTION CSS
+///////////////////////////*/
+
+.apply-bg-container {
+    background-image: url("https://res.cloudinary.com/dlcuxbo8m/image/upload/v1744629496/Blue_Minimalist_Texture_Background_Wallpaper_Image_For_Free_Download_-_Pngtree_mlapqi.jpg");
+    background-size: cover;
+    padding: 50px;
+
+}
+
+.small-bg-apply-container {
+    background-color: white;
+    padding: 20px;
+}
+
+.form-control-label {
+    font-family: Roboto;
+    font-weight: bold;
+}
+
+.submit-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.apply-now-button {
+    font-family: Roboto;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.gender-heading {
+    font-family: Roboto;
+    font-size: 15px;
+}
+
+ .collage-image {
+      width: 100%;
+      max-width: 600px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    }
+    .collage-image:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  }
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+/* Sticky Navbar ----r*/
+    .buzz-navbar {
+      background: #222;
+      color: #fff;
+      padding: 15px 30px;
+      font-size: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    /* Popup Container */
+    #buzz-service-popup {
+      position: fixed;
+      top: 60px;
+      right: 34px;
+      background: #ffffff;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+      padding: 16px;
+      display: none;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      z-index: 999;
+      border-radius: 0 0 16px 16px;
+      max-width: 600px;
+      transition: all 0.5s ease;
+      
+    }
+
+    #buzz-service-popup.popup-visible {
+      display: flex;
+    }
+
+    /* Logo Icons */
+    .buzz-service-logo {
+      width: 60px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: contain;
+      background-color: white;
+      padding: 5px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      
+    }
+
+   
+
+    /* Generic Sections */
+    .buzz-section {
+      padding: 80px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .buzz-service-logo {
+        width: 70px;
+        height: 70px;
+      }
+
+      #buzz-service-popup {
+        max-width: 90%;
+      }
+    }
+
+
+    @media (max-width: 768px) {
+  /* Smaller icons */
+  .buzz-service-logo {
+    width: 45px;   /* reduced size */
+    height: 45px;
+    padding: 3px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   /* FOOTER-------r */
+.footer {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 50px 20px 20px;
+  position: relative;
+}
+
+.footer .container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 60px;
+  align-items: start;
+}
+
+.footer-col h4 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #f7c948;
+  margin-bottom: 15px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  color: #000000;
+  transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #f7c948;
+}
+
+.footer .logo {
+  height: 90px;
+  margin-top: 40px;
+}
+
+.details p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #000000;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin-inline: auto;
+  margin-right: 60px;
+}
+
+.footer-bottom .company-name {
+  margin-right: 0;
+  font-size: 14px;
+  color: #000000;
+}
+
+.company-name {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.forex-cards-container-big {
+  margin-bottom: 50px;
+}
+
+#info-container h3 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* ====================== SOCIAL BAR ====================== */
+.social-bar {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  z-index: 9999;
+}
+
+.social-bar a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 25px 0 0 25px;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+  width: 45px;
+  overflow: hidden;
+}
+
+.social-bar a:hover {
+  width: 150px;
+}
+
+.social-bar a i {
+  min-width: 25px;
+  text-align: center;
+}
+
+.social-bar a span {
+  margin-left: 8px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.social-bar a:hover span {
+  opacity: 1;
+}
+
+/* Social brand colors */
+.facebook:hover { background-color: #3b5998; }
+.twitter:hover { background-color: #1da1f2; }
+.instagram:hover { background-color: #e1306c; }
+.linkedin:hover { background-color: #0077b5; }
+.youtube:hover { background-color: #ff0000; }
+
+
+
+/* ====================== RESPONSIVE ====================== */
+@media (max-width: 992px) {
+  .footer .container {
+    gap: 40px;
+  }
+  .footer-bottom {
+    justify-content: center;
+    text-align: center;
+    margin-right: 0;
+  }
+  .footer .logo {
+    height: 75px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    text-align: center;
+    padding: 20px 10px; /* reduce padding */
+  }
+
+  .footer .container {
+    grid-template-columns: 1fr;
+    gap: 20px; /* reduce vertical spacing between sections */
+  }
+
+  .footer-col {
+    margin-bottom: 15px; /* less gap between sections */
+  }
+
+  .footer .logo {
+    height: 60px;
+    margin-top: 15px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 8px; /* less spacing */
+    margin-top: 15px;
+  }
+
+  /* ---- REMOVE bottom bar conversion ---- */
+  .social-bar {
+    position: absolute;  /* same as desktop */
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    flex-direction: column;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .social-bar a {
+    width: 45px;
+    border-radius: 25px 0 0 25px;
+    margin: 5px 0;
+    padding: 12px;
+    justify-content: flex-start;
+  }
+
+  .social-bar a span {
+    display: inline-block;
+    opacity: 0;
+  }
+
+  .social-bar a:hover span {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------- HOME SECTION rrrrrrrrrrr-------- */
+.investment-container {
+    max-width: 100%;
+    padding: 40px 20px;
+}
+
+.investment-row {
+    display: flex;
+    align-items: center;       /* vertical center alignment */
+    justify-content: center;   /* equal spacing */
+    gap: 40px;
+    flex-wrap: wrap;
+    flex-direction: row;       /* Default row layout for medium+ screens */
+}
+
+.investment-video-wrapper {
+    flex: 1 1 350px;
+    display: flex;
+    justify-content: center;
+}
+
+.investment-video {
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 1/1;         /* Square shape for big screens */
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.investment-text-wrapper {
+    flex: 1 1 300px;
+    text-align: left;          /* Desktop & medium: left aligned */
+}
+
+.gold-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 4rem); /* Responsive font size */
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    background: linear-gradient(90deg, #b8860b, #ffd700, #b8860b);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s linear infinite, floatZoom 3s ease-in-out infinite;
+    margin: 0;
+}
+
+/* Gradient Animation */
+@keyframes shine {
+    to {
+        background-position: 200% center;
+    }
+}
+
+@keyframes floatZoom {
+    0%, 100% {
+        transform: scale(1) translateY(0);
+    }
+    50% {
+        transform: scale(1.05) translateY(-5px);
+    }
+}
+
+/* --- Responsive --- */
+
+/* Tablets & Medium Screens (768px - 992px) */
+@media (max-width: 992px) {
+    .investment-text-wrapper {
+        text-align: center;   /* Keep text center in tablets */
+    }
+}
+
+/* Small Mobiles (<768px) */
+@media (max-width: 768px) {
+    .investment-container {
+        padding-top: 70px;    /* Extra gap from navbar */
+    }
+
+    .investment-row {
+        flex-direction: column;  /* Stack vertically */
+        gap: 20px;
+    }
+
+    .investment-video {
+        max-width: 100%;
+        aspect-ratio: 16/9;   /* Widescreen looks better on small devices */
+        border-radius: 10px;
+    }
+
+    .investment-text-wrapper {
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    .gold-heading {
+        font-size: clamp(1.5rem, 6vw, 2.5rem); /* Smaller for mobiles */
+        letter-spacing: 2px;
+        margin-top:80px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/*//////////////////////////
+SERVICES CSS 
+//////////////////////////*/
+
+/* MAIN CONTAINER */
+.services-container {
+    padding: 10px;
+    background-size: cover;
+    /* background-color: #25D366; */
+    /* margin-top: 140px; */
+    margin-bottom:20px;
+   
+}
+
+@media (min-width: 768px) {
+    .services-container {
+        height: 90vh;
+        padding-top: 20px;
+    }
+}
+
+/* HEADER */
+.services-small-container {
+    text-align: center;
+}
+
+.ourservice-heading {
+    font-family: system-ui;
+    font-weight: bold;
+    font-size: 20px;
+    padding-top:50px;
+}
+
+@media (min-width: 768px) {
+    .ourservice-heading {
+        font-size: 32px;
+        padding-bottom: 60px;
+    }
+}
+
+/* FLEX GRID FIX */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px 0;
+}
+
+.col-md-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* UNIFORM ICON STYLE */
+.service-icon {
+    width: 180px;
+    height: 130px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 15px auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-icon:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .service-icon {
+        width: 150px;
+        height: 110px;
+    }
+}
+
+/* BUTTON STYLE */
+.button-name {
+    font-family: Roboto, sans-serif;
+    font-weight: 900;
+    background: radial-gradient(circle at bottom left, #f7c35f, #a66f1d); 
+    min-width: 180px;
+    text-align: center;
+    color: white;
+    border: none;
+}
+
+/* MENU ITEM TEXT */
+.styling-menu {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+/* DROPDOWN MENU STYLE */
+.dropdown-menu {
+    border-radius: 0;
+    padding: 10px 0;
+}
+
+
+/* Hover lo dropdown open cheyadam */
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* gap avoid cheyadam kosam */
+}
+
+/* Button hover kuda active look maintain cheyadam */
+.dropdown:hover .btn {
+    background: radial-gradient(circle at bottom left, #f7c35f, #a66f1d);
+    color: white;
+}
+
+
+
+
+@media (max-width: 768px) {
+    /* Home Section (video block) */
+    .investment-container {
+        padding-top: 65px !important;   /* only navbar height cover cheyadam */
+        padding-bottom: 0 !important;
+        margin-bottom: 0 !important;    /* remove extra bottom gap */
+    }
+
+    .investment-row {
+        margin-bottom: 0 !important;
+    }
+
+    .investment-text-wrapper {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Services Section */
+    .services-container {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+    .services-small-container {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+    .ourservice-heading {
+        padding-top: 0 !important;
+        margin-top: 0 !important;
+    }
+}
+
+
+
+
+
+    
+/*/////////////////////
+ OUR TEAM CSS ---r
+/////////////////////*/
+
+ .leadership-section {
+      display: flex;
+      padding: 50px 5%;
+      gap: 40px;
+      flex-wrap: wrap;
+      background-color: #0f2c5b;
+      color: white;
+    }
+    .left-content {
+      flex: 1;
+      min-width: 300px;
+    }
+    .left-content h2 {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .left-content p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .team-container {
+      flex: 2;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: flex-start; /* align top */
+      flex-wrap: nowrap;
+    }
+
+    .team-card {
+      text-align: center;
+      width: 30%;
+    }
+
+    .team-card img {
+      width: 100%;
+      height: 310px;
+      object-fit: cover;
+      display: block;
+      border-radius: 10px;
+    }
+
+   
+    @media (max-width: 992px) {
+      .leadership-section {
+        flex-direction: column;
+        padding: 30px 20px;
+      }
+      .team-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .team-card {
+        width: 100%;
+        max-width: 350px;
+      }
+    }
+    .vision-paragraph{
+        font-family: roboto;
+    
+    }
+    .goal-our-team{
+    font-weight: bold;
+    font-size:18px
+   }
+.team-name {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 13px;
+  color: white;
+  text-transform: uppercase;
+  margin: 0;
+  padding-top: 20px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+}
+
+.team-role {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 11.5px;
+  color:white;
+  text-transform: uppercase;
+  margin-top: 5px;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 576px) {
+  .team-card img {
+    object-fit: cover;
+    object-position: top;   /* Image ni top nunchi adjust cheyyali */
+  }
+}
+
+
+
+
+
+
+
+
+
+/* ================================
+   Review Carousel CSS
+================================== */
+
+.carousel-container {
+  width: 100%;
+  overflow: hidden; /* 👈 If you don’t want cards cut, use: overflow: visible; */
+  position: relative;
+  height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-track {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 16px; /* Balanced gap between cards */
+  will-change: transform;
+  justify-content: center;
+}
+
+.card {
+  min-width: 200px;
+  height: 270px;
+  background: #fff;
+  overflow: hidden;
+  flex-shrink: 0;
+  transition: transform 0.3s ease, z-index 0.3s ease;
+  z-index: 1;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* 👌 neat look */
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card.focused {
+  transform: scale(1.2); /* Default scaling on desktop */
+  z-index: 10;
+}
+
+/* ================================
+   Responsive Devices
+================================== */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .carousel-container { height: 420px; }
+  .card { min-width: 160px; height: 220px; }
+  .card.focused { transform: scale(1.15); }
+}
+
+/* Large Mobiles (big phones like iPhone Plus) */
+@media (max-width: 768px) {
+  .carousel-container { height: 360px; }
+  .card { min-width: 140px; height: 200px; }
+  .card.focused { transform: scale(1.12); }
+}
+
+/* Small Mobiles (normal phones) */
+@media (max-width: 576px) {
+  .carousel-container { height: 300px; }
+  .card { min-width: 120px; height: 180px; }
+  .card.focused { transform: scale(1.08); }
+}
+
+/* Extra Small Phones (iPhone SE, very small screens) */
+@media (max-width: 400px) {
+  .carousel-container { height: 250px; }
+  .card { min-width: 100px; height: 150px; }
+  .card.focused { transform: scale(1.05); }
+}
